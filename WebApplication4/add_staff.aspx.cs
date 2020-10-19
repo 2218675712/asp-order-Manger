@@ -16,7 +16,7 @@ namespace WebApplication4
             {
                 var ID = Convert.ToInt32(Request["staffID"]);
                 if (ID == 0) return;
-                Button2.CommandName = "Update";
+                Button1.CommandName = "Update";
                 UpdateStaff();
             }
         }
@@ -30,9 +30,9 @@ namespace WebApplication4
         {
             string filename = avatatUpload();
             int ID = Convert.ToInt32(Request["staffID"]);
-            if (Button2.CommandName == "Update")
+            if (Button1.CommandName == "Update")
             {
-                OperaterBase.CommandBySql("update Staff_Table set worker_avatar='" + filename + "' where Id=" +
+                OperaterBase.CommandBySql("update Staff_Table set worker_avatar='" + filename + "' where staffID=" +
                                           ID + "");
             }
         }
