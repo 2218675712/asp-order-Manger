@@ -30,9 +30,9 @@ namespace WebApplication4
         {
             string filename = avatatUpload();
             int ID = Convert.ToInt32(Request["staffID"]);
-            if (Button1.CommandName == "Update")
+            if (Button2.CommandName == "Update")
             {
-                OperaterBase.CommandBySql("update Staff_Table set worker_avatar='" + filename + "' where staffID=" +
+                OperaterBase.CommandBySql("update Staff_Table set worker_avatar='" + filename + "' where Id=" +
                                           ID + "");
             }
         }
@@ -67,7 +67,10 @@ namespace WebApplication4
             else if(Button2.CommandName == "Update")
             {
                 int flag = OperaterBase.CommandBySql(
-                    "");
+                    "UPDATE Staff_Table SET worker_num = '" + worker_num + "', worker_name = '" + worker_name + "'," +
+                    " worker_sex = '" + worker_sex +
+                    "' , worker_age = '" + worker_age + "'," +
+                    "worker_mobile = '" + worker_mobile + "' , worker_password = '" + worker_password + "' Id = " + ID);
                 if (flag > 0)
                 {
                     // 跳转页面
