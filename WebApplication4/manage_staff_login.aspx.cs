@@ -27,7 +27,7 @@ namespace WebApplication4
                 return;
             }
 
-            Response.Redirect("");
+            Response.Redirect("manage_staff.aspx");
         }
     }
 }
