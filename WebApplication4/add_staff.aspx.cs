@@ -16,7 +16,7 @@ namespace WebApplication4
             {
                 var ID = Convert.ToInt32(Request["staffID"]);
                 if (ID == 0) return;
-                Button1.CommandName = "Update";
+                Button2.CommandName = "Update";
                 UpdateStaff();
             }
         }
@@ -30,7 +30,7 @@ namespace WebApplication4
         {
             string filename = avatatUpload();
             int ID = Convert.ToInt32(Request["staffID"]);
-            if (Button1.CommandName == "Update")
+            if (Button2.CommandName == "Update")
             {
                 OperaterBase.CommandBySql("update Staff_Table set worker_avatar='" + filename + "' where staffID=" +
                                           ID + "");
@@ -44,7 +44,7 @@ namespace WebApplication4
         /// <param name="e"></param>
         protected void Button2_Click(object sender, EventArgs e)
         {
-            int ID = Convert.ToInt32(Request["studentID"]);
+            int ID = Convert.ToInt32(Request["staffId"]);
             string worker_num = TextBox1.Text.Trim();
             string worker_name = TextBox2.Text.Trim();
             string worker_avatar = Image1.ImageUrl;
@@ -52,9 +52,13 @@ namespace WebApplication4
             string worker_age = TextBox4.Text.Trim();
             string worker_mobile = TextBox5.Text.Trim();
             string worker_password = TextBox6.Text.Trim();
-            if (Button1.CommandName == "Insert")
+            if (Button2.CommandName == "Update")
             {
-                
+                string sql = "UPDATE Staff_Table SET worker_num = '" + worker_num + "', worker_name = '" + worker_name + "'," +
+                             " worker_sex = '" + worker_sex +
+                             "' , worker_age = '" + worker_age + "'," +
+                             "worker_mobile = '" + worker_mobile + "' , worker_password = '" + worker_password + "' where is_delete =0 and Id = " + ID ;
+                ResetUser(sql);
             }
         }
 
@@ -108,6 +112,17 @@ namespace WebApplication4
             TextBox4.Text = ds.Tables[0].Rows[0]["worker_age"].ToString();
             TextBox5.Text = ds.Tables[0].Rows[0]["worker_mobile"].ToString();
             TextBox6.Text = ds.Tables[0].Rows[0]["worker_password"].ToString();
+        }
+        /// <summary>
+        /// 更新用户信息
+        /// </summary>
+        private void ResetUser(string sql)
+        {
+
+            if (OperaterBase.CommandBySql(sql)>0)
+            {
+                Button2.Text = "true";
+            }
         }
     }
 }
