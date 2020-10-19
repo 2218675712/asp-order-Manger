@@ -64,6 +64,16 @@ namespace WebApplication4
                     Response.Redirect("manage_staff.aspx");
                 }
             }
+            else if(Button2.CommandName == "Update")
+            {
+                int flag = OperaterBase.CommandBySql(
+                    "");
+                if (flag > 0)
+                {
+                    // 跳转页面
+                    Response.Redirect("manage_staff.aspx");
+                }
+            }
         }
 
         /// <summary>
