@@ -22,12 +22,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c9c07fa-0866-4652-b3d8-7446f22ee134" name="默认的" comment="2020年10月19日 15:25:55&#10;展示员工列表&#10;删除员工实现">
-      <change afterPath="$PROJECT_DIR$/WebApplication4/add_staff.aspx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApplication4/add_staff.aspx.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApplication4/add_staff.aspx.designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApplication4/uploadHelper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApplication4/uploadModel.cs" afterDir="false" />
+    <list default="true" id="1c9c07fa-0866-4652-b3d8-7446f22ee134" name="默认的" comment="图片上传">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApplication4/.idea/dataSources/b8038e9e-53c1-48d9-969f-e1b6fcffdfd1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApplication4/.idea/dataSources/b8038e9e-53c1-48d9-969f-e1b6fcffdfd1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApplication4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApplication4/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication4/add_staff.aspx.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication4/add_staff.aspx.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +33,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -108,7 +111,7 @@
       <workItem from="1603033094394" duration="1055000" />
       <workItem from="1603035005772" duration="922000" />
       <workItem from="1603090107510" duration="2251000" />
-      <workItem from="1603114004402" duration="2810000" />
+      <workItem from="1603114004402" duration="4971000" />
     </task>
     <task id="LOCAL-00001" summary="2020年10月16日 14:51:35&#10;订单管理系统初始化&#10;配置数据库&#10;配置操作数据库的方法">
       <created>1602831166179</created>
@@ -131,7 +134,21 @@
       <option name="project" value="LOCAL" />
       <updated>1603092378490</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="图片上传">
+      <created>1603117008977</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1603117008977</updated>
+    </task>
+    <task id="LOCAL-00005" summary="图片上传">
+      <created>1603117108478</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1603117108478</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,7 +173,8 @@
     <MESSAGE value="2020年10月16日 14:51:35&#10;订单管理系统初始化&#10;配置数据库&#10;配置操作数据库的方法" />
     <MESSAGE value="2020年10月18日 23:44:48&#10;管理员登录完成" />
     <MESSAGE value="2020年10月19日 15:25:55&#10;展示员工列表&#10;删除员工实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="2020年10月19日 15:25:55&#10;展示员工列表&#10;删除员工实现" />
+    <MESSAGE value="图片上传" />
+    <option name="LAST_COMMIT_MESSAGE" value="图片上传" />
   </component>
   <component name="WindowStateProjectService">
     <state x="433" y="259" key="#SQL_方言" timestamp="1603035550223">
@@ -171,29 +189,34 @@
       <screen x="0" y="0" width="1714" height="844" />
     </state>
     <state width="230" height="195" key="DatabaseViewActions_Filter/0.0.1714.844@0.0.1714.844" timestamp="1603114224706" />
-    <state width="1675" height="211" key="GridCell.Tab.0.bottom" timestamp="1603092396372">
-      <screen x="0" y="0" width="1718" height="848" />
+    <state width="1149" height="209" key="GridCell.Tab.0.bottom" timestamp="1603117864371">
+      <screen x="0" y="0" width="1714" height="844" />
     </state>
+    <state width="1149" height="209" key="GridCell.Tab.0.bottom/0.0.1714.844@0.0.1714.844" timestamp="1603117864371" />
     <state width="1675" height="211" key="GridCell.Tab.0.bottom/0.0.1718.848@0.0.1718.848" timestamp="1603092396372" />
-    <state width="1675" height="211" key="GridCell.Tab.0.center" timestamp="1603092396372">
-      <screen x="0" y="0" width="1718" height="848" />
+    <state width="1149" height="209" key="GridCell.Tab.0.center" timestamp="1603117864371">
+      <screen x="0" y="0" width="1714" height="844" />
     </state>
+    <state width="1149" height="209" key="GridCell.Tab.0.center/0.0.1714.844@0.0.1714.844" timestamp="1603117864371" />
     <state width="1675" height="211" key="GridCell.Tab.0.center/0.0.1718.848@0.0.1718.848" timestamp="1603092396372" />
-    <state width="1675" height="211" key="GridCell.Tab.0.left" timestamp="1603092396372">
-      <screen x="0" y="0" width="1718" height="848" />
+    <state width="1149" height="209" key="GridCell.Tab.0.left" timestamp="1603117864371">
+      <screen x="0" y="0" width="1714" height="844" />
     </state>
+    <state width="1149" height="209" key="GridCell.Tab.0.left/0.0.1714.844@0.0.1714.844" timestamp="1603117864371" />
     <state width="1675" height="211" key="GridCell.Tab.0.left/0.0.1718.848@0.0.1718.848" timestamp="1603092396372" />
-    <state width="1675" height="211" key="GridCell.Tab.0.right" timestamp="1603092396372">
-      <screen x="0" y="0" width="1718" height="848" />
+    <state width="1149" height="209" key="GridCell.Tab.0.right" timestamp="1603117864371">
+      <screen x="0" y="0" width="1714" height="844" />
     </state>
+    <state width="1149" height="209" key="GridCell.Tab.0.right/0.0.1714.844@0.0.1714.844" timestamp="1603117864371" />
     <state width="1675" height="211" key="GridCell.Tab.0.right/0.0.1718.848@0.0.1718.848" timestamp="1603092396372" />
     <state width="180" height="539" key="HiddenNamespacesPopup" timestamp="1603028435546">
       <screen x="0" y="0" width="1718" height="848" />
     </state>
     <state width="180" height="539" key="HiddenNamespacesPopup/0.0.1718.848@0.0.1718.848" timestamp="1603028435546" />
-    <state x="451" y="152" key="Vcs.Push.Dialog.v2" timestamp="1603092382100">
-      <screen x="0" y="0" width="1718" height="848" />
+    <state x="450" y="151" key="Vcs.Push.Dialog.v2" timestamp="1603117113430">
+      <screen x="0" y="0" width="1714" height="844" />
     </state>
+    <state x="450" y="151" key="Vcs.Push.Dialog.v2/0.0.1714.844@0.0.1714.844" timestamp="1603117113430" />
     <state x="451" y="152" key="Vcs.Push.Dialog.v2/0.0.1718.848@0.0.1718.848" timestamp="1603092382100" />
     <state x="714" y="279" width="331" height="290" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1603033617631">
       <screen x="0" y="0" width="1718" height="848" />
@@ -207,9 +230,10 @@
       <screen x="0" y="0" width="1718" height="848" />
     </state>
     <state x="589" y="228" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog/0.0.1718.848@0.0.1718.848" timestamp="1603033512687" />
-    <state x="772" y="229" width="981" height="646" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1603114173042">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="689" y="186" width="981" height="646" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1603117690259">
+      <screen x="0" y="0" width="1714" height="844" />
     </state>
+    <state x="689" y="186" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1714.844@0.0.1714.844" timestamp="1603117690259" />
     <state x="691" y="187" width="981" height="646" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1718.848@0.0.1718.848" timestamp="1603033318676" />
     <state x="772" y="229" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603114173042" />
     <state x="660" y="324" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1602830678789">

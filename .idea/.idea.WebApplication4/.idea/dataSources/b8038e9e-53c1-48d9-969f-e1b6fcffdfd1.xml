@@ -96,6 +96,7 @@
     </table>
     <table id="26" parent="21" name="Staff_Table">
       <ObjectId>245575913</ObjectId>
+      <Outdated>1</Outdated>
       <CreatedTimestamp>2020-10-19.05:17:33.553</CreatedTimestamp>
       <ModifiedTimestamp>2020-10-19.05:22:32.880</ModifiedTimestamp>
     </table>

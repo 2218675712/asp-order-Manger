@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -13,7 +14,7 @@ namespace WebApplication4
         {
             if (!IsPostBack)
             {
-                var ID = Convert.ToInt32(Request["studentID"]);
+                var ID = Convert.ToInt32(Request["staffID"]);
                 if (ID == 0) return;
                 Button1.CommandName = "Update";
                 UpdateStaff();
@@ -36,8 +37,25 @@ namespace WebApplication4
             }
         }
 
+        /// <summary>
+        /// 添加修改用户
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void Button2_Click(object sender, EventArgs e)
         {
+            int ID = Convert.ToInt32(Request["studentID"]);
+            string worker_num = TextBox1.Text.Trim();
+            string worker_name = TextBox2.Text.Trim();
+            string worker_avatar = Image1.ImageUrl;
+            string worker_sex = TextBox3.Text.Trim();
+            string worker_age = TextBox4.Text.Trim();
+            string worker_mobile = TextBox5.Text.Trim();
+            string worker_password = TextBox6.Text.Trim();
+            if (Button1.CommandName == "Insert")
+            {
+                
+            }
         }
 
         /// <summary>
@@ -80,6 +98,16 @@ namespace WebApplication4
         /// </summary>
         private void UpdateStaff()
         {
+            var ID = Convert.ToInt32(Request["staffID"]);
+            string sql = "select * from Staff_Table where Id=" + ID + "";
+            DataSet ds = OperaterBase.GetData(sql);
+            TextBox1.Text = ds.Tables[0].Rows[0]["worker_num"].ToString();
+            TextBox2.Text = ds.Tables[0].Rows[0]["worker_name"].ToString();
+            Image1.ImageUrl = ds.Tables[0].Rows[0]["worker_avatar"].ToString();
+            TextBox3.Text = ds.Tables[0].Rows[0]["worker_sex"].ToString();
+            TextBox4.Text = ds.Tables[0].Rows[0]["worker_age"].ToString();
+            TextBox5.Text = ds.Tables[0].Rows[0]["worker_mobile"].ToString();
+            TextBox6.Text = ds.Tables[0].Rows[0]["worker_password"].ToString();
         }
     }
 }
