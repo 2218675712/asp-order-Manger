@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Administrator\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Administrator\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_WebApplication4.2062732756.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Administrator\AppData\Roaming\JetBrains\Rider2020.2\consoles\db" t="IncludeRecursive" />
+    <e p="C:\Users\Administrator\AppData\Roaming\JetBrains\Rider2020.2\extensions" t="IncludeRecursive" />
+    <e p="C:\Users\Administrator\source\repos\WebApplication4" t="IncludeFlat">
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="WebApplication4" t="IncludeRecursive">
+        <e p="add_staff.aspx" t="Include" />
+        <e p="add_staff.aspx.cs" t="Include" />
+        <e p="add_staff.aspx.designer.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="manage_staff.aspx" t="Include" />
+        <e p="manage_staff.aspx.cs" t="Include" />
+        <e p="manage_staff.aspx.designer.cs" t="Include" />
+        <e p="manage_staff_login.aspx" t="Include" />
+        <e p="manage_staff_login.aspx.cs" t="Include" />
+        <e p="manage_staff_login.aspx.designer.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="OperaterBase.cs" t="Include" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="uploadHelper.cs" t="Include" />
+        <e p="uploadModel.cs" t="Include" />
+        <e p="Web.config" t="Include" />
+        <e p="Web.Debug.config" t="Include" />
+        <e p="Web.Release.config" t="Include" />
+        <e p="WebApplication4.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="WebApplication4.sln" t="IncludeFlat" />
+    </e>
+  </component>
+</project>
