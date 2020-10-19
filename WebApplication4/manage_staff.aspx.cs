@@ -44,8 +44,13 @@ namespace WebApplication4
             }
             else if (e.CommandName == "Edit")
             {
-                Response.Redirect("/WebForm2.aspx?studentID=" + staffId + "");
+                Response.Redirect("add_staff.aspx?staffId=" + staffId);
             }
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("add_staff.aspx");
         }
     }
 }

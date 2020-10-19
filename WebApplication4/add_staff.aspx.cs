@@ -52,9 +52,17 @@ namespace WebApplication4
             string worker_age = TextBox4.Text.Trim();
             string worker_mobile = TextBox5.Text.Trim();
             string worker_password = TextBox6.Text.Trim();
-            if (Button1.CommandName == "Insert")
+            if (Button2.CommandName == "Insert")
             {
-                
+                int flag = OperaterBase.CommandBySql(
+                    "insert into Staff_Table ( worker_num, worker_name, worker_avatar, worker_sex, worker_age, worker_mobile, worker_password, is_delete) values ('" +
+                    worker_num + "','" + worker_name + "','" + worker_avatar + "','" + worker_sex + "','" + worker_age +
+                    "','" + worker_mobile + "','" + worker_password + "',0)");
+                if (flag > 0)
+                {
+                    // 跳转页面
+                    Response.Redirect("manage_staff.aspx");
+                }
             }
         }
 

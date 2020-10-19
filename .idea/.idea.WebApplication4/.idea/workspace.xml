@@ -23,9 +23,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c9c07fa-0866-4652-b3d8-7446f22ee134" name="默认的" comment="图片上传">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApplication4/.idea/dataSources/b8038e9e-53c1-48d9-969f-e1b6fcffdfd1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApplication4/.idea/dataSources/b8038e9e-53c1-48d9-969f-e1b6fcffdfd1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApplication4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApplication4/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/WebApplication4/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/WebApplication4/v16/.suo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication4/add_staff.aspx.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication4/add_staff.aspx.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication4/bin/WebApplication4.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication4/bin/WebApplication4.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication4/bin/WebApplication4.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication4/bin/WebApplication4.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication4/manage_staff.aspx" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication4/manage_staff.aspx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication4/manage_staff.aspx.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication4/manage_staff.aspx.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication4/manage_staff.aspx.designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication4/manage_staff.aspx.designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication4/obj/Debug/WebApplication4.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication4/obj/Debug/WebApplication4.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication4/obj/Debug/WebApplication4.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication4/obj/Debug/WebApplication4.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication4/obj/Debug/WebApplication4.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication4/obj/Debug/WebApplication4.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +48,9 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/61C2BCDF-D0C2-4283-B2B8-E87601A11E81/b7/b3c9b45e/HttpApplication.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -47,14 +58,14 @@
         <option value="b8038e9e-53c1-48d9-969f-e1b6fcffdfd1/database/orderManager /schema/dbo/table/Order_List.sql" />
         <option value="$PROJECT_DIR$/WebApplication4/manage_staff_login.aspx" />
         <option value="$PROJECT_DIR$/WebApplication4/Web.config" />
-        <option value="$PROJECT_DIR$/WebApplication4/manage_staff.aspx" />
         <option value="$PROJECT_DIR$/WebApplication4/manage_staff_login.aspx.cs" />
-        <option value="$PROJECT_DIR$/WebApplication4/manage_staff.aspx.cs" />
         <option value="$PROJECT_DIR$/WebApplication4/uploadHelper.cs" />
         <option value="$PROJECT_DIR$/WebApplication4/uploadModel.cs" />
-        <option value="$PROJECT_DIR$/WebApplication4/add_staff.aspx" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b8038e9e-53c1-48d9-969f-e1b6fcffdfd1/console.sql" />
+        <option value="$PROJECT_DIR$/WebApplication4/add_staff.aspx" />
+        <option value="$PROJECT_DIR$/WebApplication4/manage_staff.aspx.cs" />
         <option value="$PROJECT_DIR$/WebApplication4/add_staff.aspx.cs" />
+        <option value="$PROJECT_DIR$/WebApplication4/manage_staff.aspx" />
       </list>
     </option>
   </component>
@@ -111,7 +122,7 @@
       <workItem from="1603033094394" duration="1055000" />
       <workItem from="1603035005772" duration="922000" />
       <workItem from="1603090107510" duration="2251000" />
-      <workItem from="1603114004402" duration="4971000" />
+      <workItem from="1603114004402" duration="6933000" />
     </task>
     <task id="LOCAL-00001" summary="2020年10月16日 14:51:35&#10;订单管理系统初始化&#10;配置数据库&#10;配置操作数据库的方法">
       <created>1602831166179</created>
@@ -148,7 +159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603117108478</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="图片上传">
+      <created>1603119107968</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1603119107968</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,42 +199,107 @@
       <screen x="0" y="0" width="1718" height="848" />
     </state>
     <state x="433" y="259" key="#SQL_方言/0.0.1718.848@0.0.1718.848" timestamp="1603035550223" />
-    <state x="451" y="82" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603091199459">
-      <screen x="0" y="0" width="1718" height="848" />
+    <state x="450" y="82" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603120193553">
+      <screen x="0" y="0" width="1714" height="844" />
     </state>
+    <state x="450" y="82" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1714.844@0.0.1714.844" timestamp="1603120193553" />
     <state x="451" y="82" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1718.848@0.0.1718.848" timestamp="1603091199459" />
     <state width="230" height="195" key="DatabaseViewActions_Filter" timestamp="1603114224706">
       <screen x="0" y="0" width="1714" height="844" />
     </state>
     <state width="230" height="195" key="DatabaseViewActions_Filter/0.0.1714.844@0.0.1714.844" timestamp="1603114224706" />
-    <state width="1149" height="209" key="GridCell.Tab.0.bottom" timestamp="1603117864371">
+    <state width="1671" height="288" key="GridCell.Tab.0.bottom" timestamp="1603120852876">
       <screen x="0" y="0" width="1714" height="844" />
     </state>
-    <state width="1149" height="209" key="GridCell.Tab.0.bottom/0.0.1714.844@0.0.1714.844" timestamp="1603117864371" />
+    <state width="1671" height="288" key="GridCell.Tab.0.bottom/0.0.1714.844@0.0.1714.844" timestamp="1603120852876" />
     <state width="1675" height="211" key="GridCell.Tab.0.bottom/0.0.1718.848@0.0.1718.848" timestamp="1603092396372" />
-    <state width="1149" height="209" key="GridCell.Tab.0.center" timestamp="1603117864371">
+    <state width="1671" height="288" key="GridCell.Tab.0.center" timestamp="1603120852876">
       <screen x="0" y="0" width="1714" height="844" />
     </state>
-    <state width="1149" height="209" key="GridCell.Tab.0.center/0.0.1714.844@0.0.1714.844" timestamp="1603117864371" />
+    <state width="1671" height="288" key="GridCell.Tab.0.center/0.0.1714.844@0.0.1714.844" timestamp="1603120852876" />
     <state width="1675" height="211" key="GridCell.Tab.0.center/0.0.1718.848@0.0.1718.848" timestamp="1603092396372" />
-    <state width="1149" height="209" key="GridCell.Tab.0.left" timestamp="1603117864371">
+    <state width="1671" height="288" key="GridCell.Tab.0.left" timestamp="1603120852876">
       <screen x="0" y="0" width="1714" height="844" />
     </state>
-    <state width="1149" height="209" key="GridCell.Tab.0.left/0.0.1714.844@0.0.1714.844" timestamp="1603117864371" />
+    <state width="1671" height="288" key="GridCell.Tab.0.left/0.0.1714.844@0.0.1714.844" timestamp="1603120852876" />
     <state width="1675" height="211" key="GridCell.Tab.0.left/0.0.1718.848@0.0.1718.848" timestamp="1603092396372" />
-    <state width="1149" height="209" key="GridCell.Tab.0.right" timestamp="1603117864371">
+    <state width="1671" height="288" key="GridCell.Tab.0.right" timestamp="1603120852876">
       <screen x="0" y="0" width="1714" height="844" />
     </state>
-    <state width="1149" height="209" key="GridCell.Tab.0.right/0.0.1714.844@0.0.1714.844" timestamp="1603117864371" />
+    <state width="1671" height="288" key="GridCell.Tab.0.right/0.0.1714.844@0.0.1714.844" timestamp="1603120852876" />
     <state width="1675" height="211" key="GridCell.Tab.0.right/0.0.1718.848@0.0.1718.848" timestamp="1603092396372" />
+    <state width="1671" height="288" key="GridCell.Tab.1.bottom" timestamp="1603120898296">
+      <screen x="0" y="0" width="1714" height="844" />
+    </state>
+    <state width="1671" height="288" key="GridCell.Tab.1.bottom/0.0.1714.844@0.0.1714.844" timestamp="1603120898296" />
+    <state width="1671" height="288" key="GridCell.Tab.1.center" timestamp="1603120898296">
+      <screen x="0" y="0" width="1714" height="844" />
+    </state>
+    <state width="1671" height="288" key="GridCell.Tab.1.center/0.0.1714.844@0.0.1714.844" timestamp="1603120898296" />
+    <state width="1671" height="288" key="GridCell.Tab.1.left" timestamp="1603120898296">
+      <screen x="0" y="0" width="1714" height="844" />
+    </state>
+    <state width="1671" height="288" key="GridCell.Tab.1.left/0.0.1714.844@0.0.1714.844" timestamp="1603120898296" />
+    <state width="1671" height="288" key="GridCell.Tab.1.right" timestamp="1603120898296">
+      <screen x="0" y="0" width="1714" height="844" />
+    </state>
+    <state width="1671" height="288" key="GridCell.Tab.1.right/0.0.1714.844@0.0.1714.844" timestamp="1603120898296" />
+    <state width="1671" height="288" key="GridCell.Tab.2.bottom" timestamp="1603120852548">
+      <screen x="0" y="0" width="1714" height="844" />
+    </state>
+    <state width="1671" height="288" key="GridCell.Tab.2.bottom/0.0.1714.844@0.0.1714.844" timestamp="1603120852548" />
+    <state width="1671" height="288" key="GridCell.Tab.2.center" timestamp="1603120852548">
+      <screen x="0" y="0" width="1714" height="844" />
+    </state>
+    <state width="1671" height="288" key="GridCell.Tab.2.center/0.0.1714.844@0.0.1714.844" timestamp="1603120852548" />
+    <state width="1671" height="288" key="GridCell.Tab.2.left" timestamp="1603120852548">
+      <screen x="0" y="0" width="1714" height="844" />
+    </state>
+    <state width="1671" height="288" key="GridCell.Tab.2.left/0.0.1714.844@0.0.1714.844" timestamp="1603120852548" />
+    <state width="1671" height="288" key="GridCell.Tab.2.right" timestamp="1603120852548">
+      <screen x="0" y="0" width="1714" height="844" />
+    </state>
+    <state width="1671" height="288" key="GridCell.Tab.2.right/0.0.1714.844@0.0.1714.844" timestamp="1603120852548" />
+    <state width="1671" height="288" key="GridCell.Tab.3.bottom" timestamp="1603120852548">
+      <screen x="0" y="0" width="1714" height="844" />
+    </state>
+    <state width="1671" height="288" key="GridCell.Tab.3.bottom/0.0.1714.844@0.0.1714.844" timestamp="1603120852548" />
+    <state width="1671" height="288" key="GridCell.Tab.3.center" timestamp="1603120852548">
+      <screen x="0" y="0" width="1714" height="844" />
+    </state>
+    <state width="1671" height="288" key="GridCell.Tab.3.center/0.0.1714.844@0.0.1714.844" timestamp="1603120852548" />
+    <state width="1671" height="288" key="GridCell.Tab.3.left" timestamp="1603120852548">
+      <screen x="0" y="0" width="1714" height="844" />
+    </state>
+    <state width="1671" height="288" key="GridCell.Tab.3.left/0.0.1714.844@0.0.1714.844" timestamp="1603120852548" />
+    <state width="1671" height="288" key="GridCell.Tab.3.right" timestamp="1603120852548">
+      <screen x="0" y="0" width="1714" height="844" />
+    </state>
+    <state width="1671" height="288" key="GridCell.Tab.3.right/0.0.1714.844@0.0.1714.844" timestamp="1603120852548" />
+    <state width="1671" height="288" key="GridCell.Tab.4.bottom" timestamp="1603120852548">
+      <screen x="0" y="0" width="1714" height="844" />
+    </state>
+    <state width="1671" height="288" key="GridCell.Tab.4.bottom/0.0.1714.844@0.0.1714.844" timestamp="1603120852548" />
+    <state width="1671" height="288" key="GridCell.Tab.4.center" timestamp="1603120852548">
+      <screen x="0" y="0" width="1714" height="844" />
+    </state>
+    <state width="1671" height="288" key="GridCell.Tab.4.center/0.0.1714.844@0.0.1714.844" timestamp="1603120852548" />
+    <state width="1671" height="288" key="GridCell.Tab.4.left" timestamp="1603120852548">
+      <screen x="0" y="0" width="1714" height="844" />
+    </state>
+    <state width="1671" height="288" key="GridCell.Tab.4.left/0.0.1714.844@0.0.1714.844" timestamp="1603120852548" />
+    <state width="1671" height="288" key="GridCell.Tab.4.right" timestamp="1603120852548">
+      <screen x="0" y="0" width="1714" height="844" />
+    </state>
+    <state width="1671" height="288" key="GridCell.Tab.4.right/0.0.1714.844@0.0.1714.844" timestamp="1603120852548" />
     <state width="180" height="539" key="HiddenNamespacesPopup" timestamp="1603028435546">
       <screen x="0" y="0" width="1718" height="848" />
     </state>
     <state width="180" height="539" key="HiddenNamespacesPopup/0.0.1718.848@0.0.1718.848" timestamp="1603028435546" />
-    <state x="450" y="151" key="Vcs.Push.Dialog.v2" timestamp="1603117113430">
+    <state x="450" y="151" key="Vcs.Push.Dialog.v2" timestamp="1603119110765">
       <screen x="0" y="0" width="1714" height="844" />
     </state>
-    <state x="450" y="151" key="Vcs.Push.Dialog.v2/0.0.1714.844@0.0.1714.844" timestamp="1603117113430" />
+    <state x="450" y="151" key="Vcs.Push.Dialog.v2/0.0.1714.844@0.0.1714.844" timestamp="1603119110765" />
     <state x="451" y="152" key="Vcs.Push.Dialog.v2/0.0.1718.848@0.0.1718.848" timestamp="1603092382100" />
     <state x="714" y="279" width="331" height="290" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1603033617631">
       <screen x="0" y="0" width="1718" height="848" />
@@ -244,5 +327,24 @@
       <screen x="0" y="0" width="1718" height="848" />
     </state>
     <state x="515" y="192" key="run.anything.popup/0.0.1718.848@0.0.1718.848" timestamp="1603033639805" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WebApplication4/add_staff.aspx.cs</url>
+          <line>46</line>
+          <properties documentPath="C:\Users\Administrator\source\repos\WebApplication4\WebApplication4\add_staff.aspx.cs" initialLine="46">
+            <startOffsets>
+              <option value="1373" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1420" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
