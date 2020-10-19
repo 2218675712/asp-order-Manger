@@ -1,0 +1,85 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace WebApplication4
+{
+    public partial class add_staff : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                var ID = Convert.ToInt32(Request["studentID"]);
+                if (ID == 0) return;
+                Button1.CommandName = "Update";
+                UpdateStaff();
+            }
+        }
+
+        /// <summary>
+        /// 图片上传
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            string filename = avatatUpload();
+            int ID = Convert.ToInt32(Request["staffID"]);
+            if (Button1.CommandName == "Update")
+            {
+                OperaterBase.CommandBySql("update Staff_Table set worker_avatar='" + filename + "' where staffID=" +
+                                          ID + "");
+            }
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+        }
+
+        /// <summary>
+        /// 图片上传
+        /// </summary>
+        /// <returns>图片上传成功或者失败</returns>
+        private string avatatUpload()
+        {
+            // 获取文件名
+            string strName = FileUpload1.PostedFile.FileName;
+            try
+            {
+                // 创建上传模型类，用来接收上传的参数
+                uploadModel newUploadModel = new uploadModel();
+                newUploadModel = uploadHelper.imgUpload(strName, FileUpload1.HasFile);
+                if (newUploadModel.result)
+                {
+                    FileUpload1.PostedFile.SaveAs(newUploadModel.newFileName);
+                    Label1.Text = newUploadModel.message;
+                    Image1.ImageUrl = newUploadModel.fileName;
+                    // 插入到数据库
+                    return newUploadModel.fileName;
+                }
+                else
+                {
+                    Label1.Text = newUploadModel.message;
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+
+            return null;
+        }
+
+        /// <summary>
+        /// 修改员工信息
+        /// </summary>
+        private void UpdateStaff()
+        {
+        }
+    }
+}
