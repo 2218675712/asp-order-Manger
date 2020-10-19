@@ -16,7 +16,7 @@ namespace WebApplication4
             {
                 var ID = Convert.ToInt32(Request["staffID"]);
                 if (ID == 0) return;
-                Button1.CommandName = "Update";
+                Button2.CommandName = "Update";
                 UpdateStaff();
             }
         }

@@ -22,18 +22,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c9c07fa-0866-4652-b3d8-7446f22ee134" name="默认的" comment="图片上传">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApplication4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApplication4/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/WebApplication4/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/WebApplication4/v16/.suo" afterDir="false" />
+    <list default="true" id="1c9c07fa-0866-4652-b3d8-7446f22ee134" name="默认的" comment="添加代码完成">
       <change beforePath="$PROJECT_DIR$/WebApplication4/add_staff.aspx.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication4/add_staff.aspx.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication4/bin/WebApplication4.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication4/bin/WebApplication4.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication4/bin/WebApplication4.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication4/bin/WebApplication4.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication4/manage_staff.aspx" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication4/manage_staff.aspx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication4/manage_staff.aspx.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication4/manage_staff.aspx.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication4/manage_staff.aspx.designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication4/manage_staff.aspx.designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication4/obj/Debug/WebApplication4.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication4/obj/Debug/WebApplication4.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication4/obj/Debug/WebApplication4.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication4/obj/Debug/WebApplication4.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication4/obj/Debug/WebApplication4.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication4/obj/Debug/WebApplication4.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,8 +54,8 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b8038e9e-53c1-48d9-969f-e1b6fcffdfd1/console.sql" />
         <option value="$PROJECT_DIR$/WebApplication4/add_staff.aspx" />
         <option value="$PROJECT_DIR$/WebApplication4/manage_staff.aspx.cs" />
-        <option value="$PROJECT_DIR$/WebApplication4/add_staff.aspx.cs" />
         <option value="$PROJECT_DIR$/WebApplication4/manage_staff.aspx" />
+        <option value="$PROJECT_DIR$/WebApplication4/add_staff.aspx.cs" />
       </list>
     </option>
   </component>
@@ -122,7 +112,7 @@
       <workItem from="1603033094394" duration="1055000" />
       <workItem from="1603035005772" duration="922000" />
       <workItem from="1603090107510" duration="2251000" />
-      <workItem from="1603114004402" duration="6933000" />
+      <workItem from="1603114004402" duration="7325000" />
     </task>
     <task id="LOCAL-00001" summary="2020年10月16日 14:51:35&#10;订单管理系统初始化&#10;配置数据库&#10;配置操作数据库的方法">
       <created>1602831166179</created>
@@ -166,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603119107968</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="添加代码完成">
+      <created>1603121136029</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1603121136029</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,7 +189,8 @@
     <MESSAGE value="2020年10月18日 23:44:48&#10;管理员登录完成" />
     <MESSAGE value="2020年10月19日 15:25:55&#10;展示员工列表&#10;删除员工实现" />
     <MESSAGE value="图片上传" />
-    <option name="LAST_COMMIT_MESSAGE" value="图片上传" />
+    <MESSAGE value="添加代码完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加代码完成" />
   </component>
   <component name="WindowStateProjectService">
     <state x="433" y="259" key="#SQL_方言" timestamp="1603035550223">
@@ -296,10 +294,10 @@
       <screen x="0" y="0" width="1718" height="848" />
     </state>
     <state width="180" height="539" key="HiddenNamespacesPopup/0.0.1718.848@0.0.1718.848" timestamp="1603028435546" />
-    <state x="450" y="151" key="Vcs.Push.Dialog.v2" timestamp="1603119110765">
+    <state x="450" y="151" key="Vcs.Push.Dialog.v2" timestamp="1603121142497">
       <screen x="0" y="0" width="1714" height="844" />
     </state>
-    <state x="450" y="151" key="Vcs.Push.Dialog.v2/0.0.1714.844@0.0.1714.844" timestamp="1603119110765" />
+    <state x="450" y="151" key="Vcs.Push.Dialog.v2/0.0.1714.844@0.0.1714.844" timestamp="1603121142497" />
     <state x="451" y="152" key="Vcs.Push.Dialog.v2/0.0.1718.848@0.0.1718.848" timestamp="1603092382100" />
     <state x="714" y="279" width="331" height="290" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1603033617631">
       <screen x="0" y="0" width="1718" height="848" />
@@ -327,24 +325,5 @@
       <screen x="0" y="0" width="1718" height="848" />
     </state>
     <state x="515" y="192" key="run.anything.popup/0.0.1718.848@0.0.1718.848" timestamp="1603033639805" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/WebApplication4/add_staff.aspx.cs</url>
-          <line>46</line>
-          <properties documentPath="C:\Users\Administrator\source\repos\WebApplication4\WebApplication4\add_staff.aspx.cs" initialLine="46">
-            <startOffsets>
-              <option value="1373" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1420" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
