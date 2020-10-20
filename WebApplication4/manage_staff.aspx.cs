@@ -12,17 +12,16 @@ namespace WebApplication4
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            GetStaffData();
+            GetStaffData("select  * from Staff_Table where is_delete=0");
         }
 
         /// <summary>
-        /// 获取员工数据
+        /// 根据指定条件获取员工数据
         /// </summary>
-        private void GetStaffData()
+        private void GetStaffData(string sql)
         {
             DataSet ds =
-                OperaterBase.GetData(
-                    "select  * from Staff_Table where is_delete=0");
+                OperaterBase.GetData(sql);
 
             Repeater1.DataSource = ds;
             Repeater1.DataBind();
@@ -39,7 +38,7 @@ namespace WebApplication4
                 if (flag > 0)
                 {
                     Response.Write("<script type='text/javascript'>alert(成功删除：'" + flag + "'条数据);</script>");
-                    GetStaffData();
+                    GetStaffData("select  * from Staff_Table where is_delete=0");
                 }
             }
             else if (e.CommandName == "Edit")
@@ -51,6 +50,20 @@ namespace WebApplication4
         protected void Button1_Click(object sender, EventArgs e)
         {
             Response.Redirect("add_staff.aspx");
+        }
+
+        /// <summary>
+        /// 下拉框筛选性别
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string isDeleteSelectValue = DropDownList1.SelectedValue;
+            if (!string.IsNullOrEmpty(isDeleteSelectValue))
+            {
+                GetStaffData("select * from Staff_Table where worker_sex=" + isDeleteSelectValue);
+            }
         }
     }
 }

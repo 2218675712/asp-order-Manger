@@ -10,6 +10,11 @@
 <body>
 <form id="form1" runat="server">
     <div>
+        <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" >
+            <asp:ListItem >请选择性别</asp:ListItem>
+            <asp:ListItem Value="0">女</asp:ListItem>
+            <asp:ListItem Value="1">男</asp:ListItem>
+        </asp:DropDownList>
         <table style="text-align:center;border:solid 1px #000000;">
 
             <asp:Repeater ID="Repeater1" runat="server" OnItemCommand="Repeater1_ItemCommand">
