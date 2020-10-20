@@ -28,7 +28,7 @@ namespace WebApplication4
         /// <param name="e"></param>
         protected void Button1_Click(object sender, EventArgs e)
         {
-            string filename = avatatUpload();
+            string filename = AvatarUpload();
             int ID = Convert.ToInt32(Request["staffID"]);
             if (Button1.CommandName == "Update")
             {
@@ -48,35 +48,40 @@ namespace WebApplication4
             string worker_num = TextBox1.Text.Trim();
             string worker_name = TextBox2.Text.Trim();
             string worker_avatar = Image1.ImageUrl;
-            // string worker_sex = TextBox3.Text.Trim();
             string worker_sex = Sex_Tb.SelectedValue.Trim();
             string worker_age = TextBox4.Text.Trim();
             string worker_mobile = TextBox5.Text.Trim();
             string worker_password = TextBox6.Text.Trim();
-            if (Button2.CommandName == "Insert")
+            try
             {
-                int flag = OperaterBase.CommandBySql(
-                    "insert into Staff_Table ( worker_num, worker_name, worker_avatar, worker_sex, worker_age, worker_mobile, worker_password, is_delete) values ('" +
-                    worker_num + "','" + worker_name + "','" + worker_avatar + "','" + worker_sex + "','" + worker_age +
-                    "','" + worker_mobile + "','" + worker_password + "',0)");
+                string sql = String.Empty;
+                if (Button2.CommandName == "Insert")
+                {
+                    sql =
+                        "insert into Staff_Table ( worker_num, worker_name, worker_avatar, worker_sex, worker_age, worker_mobile, worker_password, is_delete) values ('" +
+                        worker_num + "','" + worker_name + "','" + worker_avatar + "','" + worker_sex + "','" +
+                        worker_age +
+                        "','" + worker_mobile + "','" + worker_password + "',0)";
+                }
+                else if (Button2.CommandName == "Update")
+                {
+                    sql = "UPDATE Staff_Table SET worker_num = '" + worker_num + "', worker_name = '" + worker_name +
+                          "'," + " worker_sex = '" + worker_sex + "' , worker_age = '" + worker_age + "'," +
+                          "worker_mobile = '" + worker_mobile + "' , worker_password = '" + worker_password +
+                          "' Id = " + ID;
+                }
+
+                int flag = OperaterBase.CommandBySql(sql);
                 if (flag > 0)
                 {
                     // 跳转页面
                     Response.Redirect("manage_staff.aspx");
                 }
             }
-            else if(Button2.CommandName == "Update")
+            catch (Exception exception)
             {
-                int flag = OperaterBase.CommandBySql(
-                    "UPDATE Staff_Table SET worker_num = '" + worker_num + "', worker_name = '" + worker_name + "'," +
-                    " worker_sex = '" + worker_sex +
-                    "' , worker_age = '" + worker_age + "'," +
-                    "worker_mobile = '" + worker_mobile + "' , worker_password = '" + worker_password + "' Id = " + ID);
-                if (flag > 0)
-                {
-                    // 跳转页面
-                    Response.Redirect("manage_staff.aspx");
-                }
+                Console.WriteLine(exception);
+                throw;
             }
         }
 
@@ -84,7 +89,7 @@ namespace WebApplication4
         /// 图片上传
         /// </summary>
         /// <returns>图片上传成功或者失败</returns>
-        private string avatatUpload()
+        private string AvatarUpload()
         {
             // 获取文件名
             string strName = FileUpload1.PostedFile.FileName;
@@ -126,7 +131,6 @@ namespace WebApplication4
             TextBox1.Text = ds.Tables[0].Rows[0]["worker_num"].ToString();
             TextBox2.Text = ds.Tables[0].Rows[0]["worker_name"].ToString();
             Image1.ImageUrl = ds.Tables[0].Rows[0]["worker_avatar"].ToString();
-            // TextBox3.Text = ds.Tables[0].Rows[0]["worker_sex"].ToString();
             Sex_Tb.SelectedValue = ds.Tables[0].Rows[0]["worker_sex"].ToString();
             TextBox4.Text = ds.Tables[0].Rows[0]["worker_age"].ToString();
             TextBox5.Text = ds.Tables[0].Rows[0]["worker_mobile"].ToString();
