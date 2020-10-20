@@ -64,6 +64,10 @@ namespace WebApplication4
             {
                 GetStaffData("select * from Staff_Table where worker_sex=" + isDeleteSelectValue);
             }
+            else
+            {
+                GetStaffData("select  * from Staff_Table where is_delete=0");
+            }
         }
     }
 }
