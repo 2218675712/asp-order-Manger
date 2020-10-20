@@ -27,7 +27,15 @@ namespace WebApplication4
                 return;
             }
 
-            Response.Redirect("manage_staff.aspx");
+            // 必须是管理员
+            if (ds.Tables[0].Rows[0]["worker_num"].ToString() == "admin")
+            {
+                Response.Redirect("manage_staff.aspx");
+            }
+            else
+            {
+                Response.Redirect("");
+            }
         }
     }
 }
