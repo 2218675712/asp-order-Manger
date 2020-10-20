@@ -11,7 +11,7 @@
 <form id="form1" runat="server">
     <div>
         <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" >
-            <asp:ListItem >请选择性别</asp:ListItem>
+            <asp:ListItem Value="">请选择性别</asp:ListItem>
             <asp:ListItem Value="0">女</asp:ListItem>
             <asp:ListItem Value="1">男</asp:ListItem>
         </asp:DropDownList>
