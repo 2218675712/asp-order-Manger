@@ -76,13 +76,13 @@ namespace WebApplication4 {
         protected global::System.Web.UI.WebControls.Image Image1;
         
         /// <summary>
-        /// TextBox3 control.
+        /// Sex_Tb control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify, move the field declaration from the designer file to a code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.RadioButtonList Sex_Tb;
         
         /// <summary>
         /// TextBox4 control.

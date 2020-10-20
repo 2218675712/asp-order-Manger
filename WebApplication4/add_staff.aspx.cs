@@ -48,7 +48,8 @@ namespace WebApplication4
             string worker_num = TextBox1.Text.Trim();
             string worker_name = TextBox2.Text.Trim();
             string worker_avatar = Image1.ImageUrl;
-            string worker_sex = TextBox3.Text.Trim();
+            // string worker_sex = TextBox3.Text.Trim();
+            string worker_sex = Sex_Tb.SelectedValue.Trim();
             string worker_age = TextBox4.Text.Trim();
             string worker_mobile = TextBox5.Text.Trim();
             string worker_password = TextBox6.Text.Trim();
@@ -125,7 +126,8 @@ namespace WebApplication4
             TextBox1.Text = ds.Tables[0].Rows[0]["worker_num"].ToString();
             TextBox2.Text = ds.Tables[0].Rows[0]["worker_name"].ToString();
             Image1.ImageUrl = ds.Tables[0].Rows[0]["worker_avatar"].ToString();
-            TextBox3.Text = ds.Tables[0].Rows[0]["worker_sex"].ToString();
+            // TextBox3.Text = ds.Tables[0].Rows[0]["worker_sex"].ToString();
+            Sex_Tb.SelectedValue = ds.Tables[0].Rows[0]["worker_sex"].ToString();
             TextBox4.Text = ds.Tables[0].Rows[0]["worker_age"].ToString();
             TextBox5.Text = ds.Tables[0].Rows[0]["worker_mobile"].ToString();
             TextBox6.Text = ds.Tables[0].Rows[0]["worker_password"].ToString();

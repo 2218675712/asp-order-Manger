@@ -33,7 +33,8 @@
                             <asp:Image ID="Image1" runat="server" ImageUrl='<%#Eval("worker_avatar") %>' Width="50px" Height="50px"/>
                         </td>
                         <%-- <td><%#Eval("worker_avatar") %></td> --%>
-                        <td><%#Eval("worker_sex") %></td>
+                        <%-- <td><%#Eval("worker_sex") %></td> --%>
+                        <td><%#Eval("worker_sex").ToString()=="0"?"女":"男" %></td>
                         <td><%#Eval("worker_age") %></td>
                         <td><%#Eval("worker_mobile") %></td>
                         <td><%#Eval("worker_password") %></td>

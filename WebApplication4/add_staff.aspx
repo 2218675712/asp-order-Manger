@@ -52,7 +52,11 @@
                     <label>员工性别:</label>
                 </td>
                 <td>
-                    <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                    <%-- <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox> --%>
+                    <asp:RadioButtonList runat="server" ID="Sex_Tb" RepeatDirection="Horizontal" RepeatLayout="Table">
+                        <asp:ListItem Value="1">男</asp:ListItem>
+                        <asp:ListItem Value="0">女</asp:ListItem>
+                    </asp:RadioButtonList>
                 </td>
             </tr>
             <tr>
