@@ -23,10 +23,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c9c07fa-0866-4652-b3d8-7446f22ee134" name="默认的" comment="更新用户开始">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApplication4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApplication4/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApplication4/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApplication4/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/config/applicationhost.config" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/config/applicationhost.config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication4/add_staff.aspx.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication4/add_staff.aspx.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication4/bin/WebApplication4.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication4/bin/WebApplication4.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication4/bin/WebApplication4.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication4/bin/WebApplication4.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication4/obj/Debug/WebApplication4.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication4/obj/Debug/WebApplication4.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication4/obj/Debug/WebApplication4.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication4/obj/Debug/WebApplication4.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication4/obj/Debug/WebApplication4.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication4/obj/Debug/WebApplication4.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication4/obj/Debug/WebApplication4.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication4/obj/Debug/WebApplication4.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication4/obj/Debug/WebApplication4.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication4/obj/Debug/WebApplication4.pdb" afterDir="false" />
     </list>
@@ -45,24 +49,7 @@
     <option name="RESET_MODE" value="MIXED" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/Administrator/source/repos/WebApplication4/WebApplication4/add_staff.aspx.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Administrator/source/repos/WebApplication4/WebApplication4/manage_staff.aspx.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Administrator/source/repos/WebApplication4/WebApplication4/add_staff.aspx.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Administrator/source/repos/WebApplication4/WebApplication4/add_staff.aspx.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Administrator/source/repos/WebApplication4/WebApplication4/add_staff.aspx.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Administrator/source/repos/WebApplication4/WebApplication4/manage_staff.aspx.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Administrator/source/repos/WebApplication4/WebApplication4/manage_staff.aspx.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Administrator/source/repos/WebApplication4/WebApplication4/manage_staff.aspx.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Administrator/source/repos/WebApplication4/WebApplication4/add_staff.aspx.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Administrator/source/repos/WebApplication4/WebApplication4/add_staff.aspx.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Administrator/source/repos/WebApplication4/WebApplication4/add_staff.aspx.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/61C2BCDF-D0C2-4283-B2B8-E87601A11E81/b7/b3c9b45e/HttpApplication.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Administrator/source/repos/WebApplication4/WebApplication4/add_staff.aspx.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Administrator/source/repos/WebApplication4/WebApplication4/add_staff.aspx.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Administrator/source/repos/WebApplication4/WebApplication4/manage_staff.aspx.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Administrator/source/repos/WebApplication4/WebApplication4/add_staff.aspx.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Administrator/source/repos/WebApplication4/WebApplication4/add_staff.aspx.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Administrator/source/repos/WebApplication4/WebApplication4/add_staff.aspx.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -136,6 +123,7 @@
       <workItem from="1603035005772" duration="922000" />
       <workItem from="1603090107510" duration="2251000" />
       <workItem from="1603114004402" duration="7325000" />
+      <workItem from="1603154658353" duration="123000" />
     </task>
     <task id="LOCAL-00001" summary="2020年10月16日 14:51:35&#10;订单管理系统初始化&#10;配置数据库&#10;配置操作数据库的方法">
       <created>1602831166179</created>
@@ -368,24 +356,5 @@
       <screen x="0" y="0" width="1718" height="848" />
     </state>
     <state x="515" y="192" key="run.anything.popup/0.0.1718.848@0.0.1718.848" timestamp="1603033639805" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/WebApplication4/add_staff.aspx.cs</url>
-          <line>68</line>
-          <properties documentPath="C:\Users\Administrator\source\repos\WebApplication4\WebApplication4\add_staff.aspx.cs" initialLine="68">
-            <startOffsets>
-              <option value="2541" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2934" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
