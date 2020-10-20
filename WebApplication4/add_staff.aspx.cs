@@ -32,7 +32,7 @@ namespace WebApplication4
             int ID = Convert.ToInt32(Request["staffID"]);
             if (Button1.CommandName == "Update")
             {
-                OperaterBase.CommandBySql("update Staff_Table set worker_avatar='" + filename + "' where Id=" +
+                OperaterBase.CommandBySql("update Staff_Table set worker_avatar='" + filename + "' where staffID=" +
                                           ID + "");
             }
         }
