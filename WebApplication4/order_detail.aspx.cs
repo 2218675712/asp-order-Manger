@@ -14,7 +14,34 @@ namespace WebApplication4
         {
             if (!IsPostBack)
             {
+                // 锁定员工姓名
+                GetStaffDetail();
+                // 获取设备下拉列表
                 GetDeviceList();
+            }
+        }
+
+        /// <summary>
+        /// 锁定员工姓名
+        /// </summary>
+        private void GetStaffDetail()
+        {
+            // 获取传递过来的员工id
+            string staffId = Request["staffId"];
+            if (!string.IsNullOrEmpty(staffId))
+            {
+                DataSet ds = OperaterBase.GetData("select * from Staff_Table where is_delete=0 and Id=" + staffId);
+                // 如果查询到数据,给员工姓名textBox赋值,并向隐藏控件赋值id
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    TextBox4.Text = ds.Tables[0].Rows[0]["worker_name"].ToString();
+                    HiddenField1.Value = ds.Tables[0].Rows[0]["Id"].ToString();
+                }
+                // 查不到跳转到登录页面
+                else
+                {
+                    Response.Redirect("manage_staff_login.aspx");
+                }
             }
         }
 
