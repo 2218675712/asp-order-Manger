@@ -27,7 +27,7 @@ namespace WebApplication4
         /// </summary>
         private void GetDeviceList()
         {
-            DataSet ds = OperaterBase.GetData("select * from Device_List where is_delete=0");
+            DataSet ds = OperaterBase.GetData("select * from Device_List where is_delete=0 order by device_number");
             DropDownList1.DataSource = ds;
             DropDownList1.DataTextField = "device_number";
             DropDownList1.DataValueField = "id";
