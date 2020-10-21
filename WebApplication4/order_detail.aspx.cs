@@ -47,6 +47,18 @@ namespace WebApplication4
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            string order_number = TextBox1.Text;
+            string device_number = DropDownList1.DataValueField;
+            string device_count = TextBox3.Text;
+            //todo 做判断库存容量
+            string sql = "insert into Order_List ( order_number, device_id, device_count,is_delete)values ('" +
+                         order_number
+                         + "','" + device_number + "','" + device_count + "',0)";
+            int num = OperaterBase.CommandBySql(sql);
+            if (num > 0)
+            {
+                Response.Redirect("order_list.aspx");
+            }
         }
 
         /// <summary>
@@ -61,15 +73,6 @@ namespace WebApplication4
             DropDownList1.DataBind();
             // 插入到第一个位置,内容和value值
             DropDownList1.Items.Insert(0, new ListItem("请选择设备编号", "0"));
-        }
-
-        /// <summary>
-        /// 点击下拉列表
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
-        {
         }
     }
 }

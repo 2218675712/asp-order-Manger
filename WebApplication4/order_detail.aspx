@@ -31,7 +31,7 @@
                     <label>设备编号:</label>
                 </td>
                 <td>
-                    <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged"></asp:DropDownList>
+                    <asp:DropDownList ID="DropDownList1" runat="server" ></asp:DropDownList>
                 </td>
             </tr>
             <tr>
