@@ -32,6 +32,8 @@ namespace WebApplication4
             DropDownList1.DataTextField = "device_number";
             DropDownList1.DataValueField = "id";
             DropDownList1.DataBind();
+            // 插入到第一个位置,内容和value值
+            DropDownList1.Items.Insert(0, new ListItem("请选择设备编号", "0"));
         }
 
         /// <summary>
