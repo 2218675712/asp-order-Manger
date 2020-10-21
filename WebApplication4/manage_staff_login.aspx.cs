@@ -34,7 +34,7 @@ namespace WebApplication4
             }
             else
             {
-                Response.Redirect("");
+                Response.Redirect("order_list.aspx?staffId=" + ds.Tables[0].Rows[0]["Id"]);
             }
         }
     }
