@@ -41,7 +41,17 @@ namespace WebApplication4
         /// <param name="e"></param>
         protected void LinkButton1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("order_detail.aspx");
+            string staffId = Request["staffId"];
+            if (!string.IsNullOrEmpty(staffId))
+            {
+                // 跳转到订单详情页 当前登录人的id传过去
+                Response.Redirect("order_detail.aspx?staffId=" + staffId);
+            }
+            else
+            {
+                // 登录信息失效,需要重新登陆
+                Response.Redirect("manage_staff_login.aspx");
+            }
         }
     }
 }
