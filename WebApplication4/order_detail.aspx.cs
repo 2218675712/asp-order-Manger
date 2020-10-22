@@ -48,16 +48,21 @@ namespace WebApplication4
         protected void Button1_Click(object sender, EventArgs e)
         {
             string order_number = TextBox1.Text;
-            string device_number = DropDownList1.DataValueField;
+            string device_number = DropDownList1.SelectedItem.Text;
             string device_count = TextBox3.Text;
             //todo 做判断库存容量
+            if (!GetIinventoryCount(device_number, device_count))
+            {
+                return;
+            }
+
             string sql = "insert into Order_List ( order_number, device_id, device_count,is_delete)values ('" +
                          order_number
                          + "','" + device_number + "','" + device_count + "',0)";
             int num = OperaterBase.CommandBySql(sql);
             if (num > 0)
             {
-                Response.Redirect("order_list.aspx");
+                Response.Redirect("manage_staff_login.aspx");
             }
         }
 
@@ -73,6 +78,37 @@ namespace WebApplication4
             DropDownList1.DataBind();
             // 插入到第一个位置,内容和value值
             DropDownList1.Items.Insert(0, new ListItem("请选择设备编号", "0"));
+        }
+
+        /// <summary>
+        /// 库存数量比对
+        /// </summary>
+        /// <param name="device_number">设备型号</param>
+        /// <param name="device_count">下单数量</param>
+        /// <returns></returns>
+        public bool GetIinventoryCount(string device_number, string device_count)
+        {
+            bool flag = false;
+            DataSet ds =
+                OperaterBase.GetData("select * from Device_List where device_number = '" + device_number + "'");
+            // 说明查出来数据了
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                if (Convert.ToInt32(device_count) > Convert.ToInt32(ds.Tables[0].Rows[0]["device_count"]))
+                {
+                    Label1.Text = "下单数量大于库存数量，库存数量为" + Convert.ToInt32(ds.Tables[0].Rows[0]["device_count"]);
+                }
+                else
+                {
+                    flag = true;
+                }
+            }
+            else
+            {
+                Label1.Text = "设备号有异常，请检查";
+            }
+
+            return flag;
         }
     }
 }
