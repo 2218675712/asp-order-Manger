@@ -47,6 +47,8 @@ namespace WebApplication4
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            // 获取传递过来的员工id
+            string staffId = Request["staffId"];
             string order_number = TextBox1.Text;
             string device_number = DropDownList1.SelectedItem.Text;
             string device_count = TextBox3.Text;
@@ -56,9 +58,9 @@ namespace WebApplication4
                 return;
             }
 
-            string sql = "insert into Order_List ( order_number, device_id, device_count,is_delete)values ('" +
+            string sql = "insert into Order_List ( order_number,order_staff, device_id, device_count,is_delete)values ('" +
                          order_number
-                         + "','" + device_number + "','" + device_count + "',0)";
+                         + "','" +staffId+"','"+ device_number + "','" + device_count + "',0)";
             int num = OperaterBase.CommandBySql(sql);
             if (num > 0)
             {
