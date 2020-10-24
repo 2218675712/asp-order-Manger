@@ -52,15 +52,17 @@ namespace WebApplication4
             string order_number = TextBox1.Text;
             string device_number = DropDownList1.SelectedItem.Text;
             string device_count = TextBox3.Text;
-            //todo 做判断库存容量
-            if (!GetIinventoryCount(device_number, device_count))
+            // 库存设置
+            int count = GetIinventoryCount(device_number, device_count);
+            if (count == -1)
             {
                 return;
             }
 
-            string sql = "insert into Order_List ( order_number,order_staff, device_id, device_count,is_delete)values ('" +
-                         order_number
-                         + "','" +staffId+"','"+ device_number + "','" + device_count + "',0)";
+            string sql =
+                "insert into Order_List ( order_number,order_staff, device_id, device_count,is_delete)values ('" +
+                order_number
+                + "','" + staffId + "','" + device_number + "','" + device_count + "',0)";
             int num = OperaterBase.CommandBySql(sql);
             if (num > 0)
             {
@@ -83,14 +85,15 @@ namespace WebApplication4
         }
 
         /// <summary>
-        /// 库存数量比对
+        /// 库存数量比对,重新设置库存数量
         /// </summary>
         /// <param name="device_number">设备型号</param>
         /// <param name="device_count">下单数量</param>
         /// <returns></returns>
-        public bool GetIinventoryCount(string device_number, string device_count)
+        public int GetIinventoryCount(string device_number, string device_count)
         {
-            bool flag = false;
+            // 应该重新设置的库存数量
+            int count = -1;
             DataSet ds =
                 OperaterBase.GetData("select * from Device_List where device_number = '" + device_number + "'");
             // 说明查出来数据了
@@ -102,7 +105,10 @@ namespace WebApplication4
                 }
                 else
                 {
-                    flag = true;
+                    // 数量正常，可以正常减去
+                    count = Convert.ToInt32(ds.Tables[0].Rows[0]["device_count"]) - Convert.ToInt32(device_count);
+                    OperaterBase.CommandBySql("update Device_List set device_count=" + count +
+                                              " where device_number='" + device_number + "'");
                 }
             }
             else
@@ -110,7 +116,7 @@ namespace WebApplication4
                 Label1.Text = "设备号有异常，请检查";
             }
 
-            return flag;
+            return count;
         }
     }
 }
