@@ -31,7 +31,7 @@
                     <label>设备编号:</label>
                 </td>
                 <td>
-                    <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged"></asp:DropDownList>
+                    <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True"></asp:DropDownList>
                 </td>
             </tr>
             <tr>
@@ -47,7 +47,7 @@
                     <label>员工姓名:</label>
                 </td>
                 <td>
-                    <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TextBox4" runat="server" Enabled="False"></asp:TextBox>
                 </td>
             </tr>
 
@@ -57,6 +57,7 @@
                 </td>
                 <td>
                     <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+                    <asp:HiddenField ID="HiddenField1" runat="server" />
                 </td>
             </tr>
         </table>
