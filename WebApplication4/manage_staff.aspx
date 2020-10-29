@@ -10,11 +10,19 @@
 <body>
 <form id="form1" runat="server">
     <div>
-        <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" >
+        <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
             <asp:ListItem Value="">请选择性别</asp:ListItem>
             <asp:ListItem Value="0">女</asp:ListItem>
             <asp:ListItem Value="1">男</asp:ListItem>
         </asp:DropDownList>
+        <div>
+            <asp:Menu  ID="Menu1" runat="server">
+                <Items>
+                    <asp:MenuItem NavigateUrl="order_detail.aspx" Text="下订单列表" Value="下订单列表"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="order_list.aspx" Text="订单列表" Value="订单列表"></asp:MenuItem>
+                </Items>
+            </asp:Menu>
+        </div>
         <table style="text-align:center;border:solid 1px #000000;">
 
             <asp:Repeater ID="Repeater1" runat="server" OnItemCommand="Repeater1_ItemCommand">
