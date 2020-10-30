@@ -82,6 +82,7 @@
                     <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
                 </td>
             </tr>
+            <%-- todo 三联动 --%>
             <tr>
                 <td>
                     <asp:Button ID="Button2" runat="server" Text="确定" CommandName="Insert" OnClick="Button2_Click"/>

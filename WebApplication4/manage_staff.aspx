@@ -18,8 +18,8 @@
         <div>
             <asp:Menu  ID="Menu1" runat="server">
                 <Items>
-                    <asp:MenuItem NavigateUrl="order_detail.aspx" Text="下订单列表" Value="下订单列表"></asp:MenuItem>
-                    <asp:MenuItem NavigateUrl="order_list.aspx" Text="订单列表" Value="订单列表"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="manage_staff.aspx" Text="员工列表" Value="员工列表"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="out_device_list.aspx" Text="出库列表" Value="出库列表"></asp:MenuItem>
                 </Items>
             </asp:Menu>
         </div>

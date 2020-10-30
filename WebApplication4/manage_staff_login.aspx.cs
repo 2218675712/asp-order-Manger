@@ -16,6 +16,7 @@ namespace WebApplication4
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            //todo 使用session改进登录
             string username = TextBox1.Text;
             string password = TextBox2.Text;
             string adminLoginSql = "select * from Staff_Table where worker_mobile='" + username +
