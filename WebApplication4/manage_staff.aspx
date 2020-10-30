@@ -59,6 +59,7 @@
             </asp:Repeater>
         </table>
         <asp:Button ID="Button1" runat="server" Text="新建用户" OnClick="Button1_Click"/>
+        <asp:Button ID="Button2" runat="server" Text="退出登录" OnClick="Button2_Click" />
 
     </div>
 </form>

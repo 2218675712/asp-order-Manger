@@ -16,7 +16,6 @@ namespace WebApplication4
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            //todo 使用session改进登录
             string username = TextBox1.Text;
             string password = TextBox2.Text;
             string adminLoginSql = "select * from Staff_Table where worker_mobile='" + username +
@@ -27,6 +26,16 @@ namespace WebApplication4
                 Label1.Text = "信息有误，请检查";
                 return;
             }
+            
+            
+            // 存入session，判断session是否为空
+            Session["login_user"] = ds.Tables[0].Rows[0]["worker_mobile"];
+            if (string.IsNullOrEmpty(Session["login_user"].ToString()))
+            {
+                Label1.Text = "服务器错误，请联系管理员";
+                return;
+            }
+
 
             // 必须是管理员
             if (ds.Tables[0].Rows[0]["worker_num"].ToString() == "admin")

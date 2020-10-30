@@ -12,7 +12,22 @@ namespace WebApplication4
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            GetStaffData("select  * from Staff_Table where is_delete=0");
+            if (!IsPostBack)
+            {
+                string login_user = Session["login_user"].ToString();
+                if (string.IsNullOrEmpty(login_user))
+                {
+                    Response.Write("登录异常");
+                    return;
+                }
+                else
+                {
+                    string time = System.DateTime.Now.ToString();
+                    Response.Write("欢迎" + login_user + "，您在" + time + "登录");
+                }
+
+                GetStaffData("select  * from Staff_Table where is_delete=0");
+            }
         }
 
         /// <summary>
@@ -68,6 +83,17 @@ namespace WebApplication4
             {
                 GetStaffData("select  * from Staff_Table where is_delete=0");
             }
+        }
+
+        /// <summary>
+        /// 退出登录
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Response.Redirect("manage_staff_login.aspx");
         }
     }
 }

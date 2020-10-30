@@ -35,6 +35,7 @@
                 </ItemTemplate>
             </asp:Repeater>
         </table>
+        <asp:Button ID="Button1" runat="server" Text="退出登录" OnClick="Button1_Click" />
     </div>
 </form>
 </body>
