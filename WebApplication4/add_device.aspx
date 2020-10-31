@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="manage_staff_login.aspx.cs" Inherits="WebApplication4.manage_staff_login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="add_device.aspx.cs" Inherits="WebApplication4.add_device" %>
 
 <!DOCTYPE html>
 
@@ -12,27 +12,20 @@
     <div>
         <table>
             <tr>
-                <td>手机号:</td>
+                <td>设备编号：</td>
                 <td>
                     <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
                 </td>
+
             </tr>
             <tr>
-                <td>密码:</td>
+                <td>数量：</td>
                 <td>
                     <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
                 </td>
             </tr>
-            <tr>
-                <td>
-                    <asp:Button ID="Button1" runat="server" Text="登录" OnClick="Button1_Click"/>
-
-                </td>
-                <td>
-                    <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
-                </td>
-            </tr>
         </table>
+        <asp:Button ID="Button1" runat="server" Text="确认" OnClick="Button1_Click"/>
     </div>
 </form>
 </body>

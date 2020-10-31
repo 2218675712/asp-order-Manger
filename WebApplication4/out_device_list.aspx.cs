@@ -31,9 +31,7 @@ namespace WebApplication4
         /// <summary>
         /// 下拉框筛选是否删除
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs args)
         {
             // 获取下拉框value值
             string isDeleteSelectValue = DropDownList1.SelectedValue;
@@ -43,7 +41,7 @@ namespace WebApplication4
             }
             else
             {
-                GetStaffData("select  * from Staff_Table where");
+                GetStaffData("select  * from V_Out_Stock");
             }
         }
 
@@ -57,6 +55,39 @@ namespace WebApplication4
 
             Repeater1.DataSource = ds;
             Repeater1.DataBind();
+        }
+
+        /// <summary>
+        /// 表格更新或删除功能
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="e"></param>
+        protected void Repeater1_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
+            int deviceId = Convert.ToInt32(((HiddenField) e.Item.FindControl("HiddenField1")).Value);
+            if (e.CommandName == "Delete")
+            {
+                string sql = "update V_Out_Stock set is_delete=1 where id = " + deviceId;
+                int flag = OperaterBase.CommandBySql(sql);
+                if (flag > 0)
+                {
+                    Response.Write("<script type='text/javascript'>alert(成功删除：'" + flag + "'条数据);</script>");
+                    DropDownList1_SelectedIndexChanged(null,null);
+                }
+            }
+            else if (e.CommandName == "Edit")
+            {
+                Response.Redirect("add_device.aspx?deviceId="+deviceId);
+            }
+        }
+
+        /// <summary>
+        /// 添加设备数
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void Button3_Click(object sender, EventArgs e)
+        {
         }
     }
 }
