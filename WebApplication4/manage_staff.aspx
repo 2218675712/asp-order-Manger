@@ -37,6 +37,9 @@
                         <td>年龄</td>
                         <td>手机号</td>
                         <td>密码</td>
+                        <td>省份</td>
+                        <td>城市</td>
+                        <td>县区</td>
                     </tr>
 
                 </HeaderTemplate>
@@ -51,6 +54,9 @@
                         <td><%#Eval("worker_age") %></td>
                         <td><%#Eval("worker_mobile") %></td>
                         <td><%#Eval("worker_password") %></td>
+                        <td><%#Eval("s_province") %></td>
+                        <td><%#Eval("s_city") %></td>
+                        <td><%#Eval("s_district") %></td>
                         <td>
                             <asp:LinkButton ID="LinkButton1" runat="server" CommandName="Edit">更新</asp:LinkButton>
                             <asp:LinkButton ID="LinkButton2" runat="server" CommandName="Delete">删除</asp:LinkButton>
