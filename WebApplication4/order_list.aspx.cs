@@ -40,7 +40,7 @@ namespace WebApplication4
             // 判断是否为空
             if (!string.IsNullOrEmpty(staffId))
             {
-                DataSet ds = OperaterBase.GetData("select * from V_Order_Sta_Dev where id= " + staffId);
+                DataSet ds = OperaterBase.GetData("select * from V_Order_Sta_Dev where order_staff= " + staffId);
                 Repeater1.DataSource = ds;
                 Repeater1.DataBind();
             }
