@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 
 namespace WebApplication4
 {
-    public partial class out_device_list : System.Web.UI.Page
+    public partial class device_list : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -17,11 +17,11 @@ namespace WebApplication4
         }
 
         /// <summary>
-        /// 获取出库列表
+        /// 获取设备列表
         /// </summary>
         public void GetOutDeviceList()
         {
-            DataSet ds = OperaterBase.GetData("select * from V_Out_Stock");
+            DataSet ds = OperaterBase.GetData("select * from Device_List");
             Repeater1.DataSource = ds;
             Repeater1.DataBind();
         }
@@ -35,11 +35,11 @@ namespace WebApplication4
             string isDeleteSelectValue = DropDownList1.SelectedValue;
             if (!string.IsNullOrEmpty(isDeleteSelectValue))
             {
-                GetStaffData("select * from V_Out_Stock where is_delete=" + isDeleteSelectValue);
+                GetStaffData("select * from Device_List where is_delete=" + isDeleteSelectValue);
             }
             else
             {
-                GetStaffData("select  * from V_Out_Stock");
+                GetStaffData("select  * from Device_List");
             }
         }
 
@@ -62,6 +62,31 @@ namespace WebApplication4
         /// <param name="e"></param>
         protected void Repeater1_ItemCommand(object source, RepeaterCommandEventArgs e)
         {
+            int deviceId = Convert.ToInt32(((HiddenField) e.Item.FindControl("HiddenField1")).Value);
+            if (e.CommandName == "Delete")
+            {
+                string sql = "update Device_List set is_delete=1 where id = " + deviceId;
+                int flag = OperaterBase.CommandBySql(sql);
+                if (flag > 0)
+                {
+                    Response.Write("<script type='text/javascript'>alert(成功删除：'" + flag + "'条数据);</script>");
+                    DropDownList1_SelectedIndexChanged(null,null);
+                }
+            }
+            else if (e.CommandName == "Edit")
+            {
+                Response.Redirect("add_device.aspx?deviceId="+deviceId);
+            }
+        }
+
+        /// <summary>
+        /// 添加设备数
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("add_device.aspx");
         }
     }
 }

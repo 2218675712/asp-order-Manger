@@ -25,7 +25,8 @@
                 </td>
             </tr>
         </table>
-        <asp:Button ID="Button1" runat="server" Text="确认" OnClick="Button1_Click"/>
+        <asp:Button ID="Button1" runat="server" Text="确认" OnClick="Button1_Click" CommandName="Insert"/><br />
+        <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
     </div>
 </form>
 </body>

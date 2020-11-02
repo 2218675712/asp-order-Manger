@@ -19,8 +19,9 @@
             <asp:Menu  ID="Menu1" runat="server">
                 <Items>
                     <asp:MenuItem NavigateUrl="manage_staff.aspx" Text="员工列表" Value="员工列表"></asp:MenuItem>
-                    <asp:MenuItem NavigateUrl="out_device_list.aspx" Text="出库列表" Value="出库列表"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="device_list.aspx" Text="设备列表" Value="设备列表"></asp:MenuItem>
                     <asp:MenuItem NavigateUrl="manage_info.aspx" Text="个人信息" Value="个人信息"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="out_device_list.aspx" Text="出库列表" Value="出库列表"></asp:MenuItem>
                 </Items>
             </asp:Menu>
         </div>

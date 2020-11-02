@@ -74,6 +74,7 @@
     <Content Include="manage_staff_login.aspx" />
     <Content Include="order_detail.aspx" />
     <Content Include="order_list.aspx" />
+    <Content Include="device_list.aspx" />
     <Content Include="out_device_list.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -127,6 +128,13 @@
     </Compile>
     <Compile Include="order_list.aspx.designer.cs">
       <DependentUpon>order_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="device_list.aspx.cs">
+      <DependentUpon>device_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="device_list.aspx.designer.cs">
+      <DependentUpon>device_list.aspx</DependentUpon>
     </Compile>
     <Compile Include="out_device_list.aspx.cs">
       <DependentUpon>out_device_list.aspx</DependentUpon>

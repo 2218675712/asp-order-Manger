@@ -10,7 +10,7 @@
 namespace WebApplication4 {
     
     
-    public partial class out_device_list {
+    public partial class device_list {
         
         /// <summary>
         /// form1 control.
@@ -47,5 +47,14 @@ namespace WebApplication4 {
         /// To modify, move the field declaration from the designer file to a code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater Repeater1;
+        
+        /// <summary>
+        /// Button3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify, move the field declaration from the designer file to a code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button3;
     }
 }
