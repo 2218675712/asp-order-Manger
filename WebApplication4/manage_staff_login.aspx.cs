@@ -40,7 +40,7 @@ namespace WebApplication4
             // 必须是管理员
             if (ds.Tables[0].Rows[0]["worker_num"].ToString() == "admin")
             {
-                Response.Redirect("manage_staff.aspx");
+                Response.Redirect("manage_staff.aspx?staffId=1");
             }
             else
             {

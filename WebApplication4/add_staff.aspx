@@ -88,7 +88,12 @@
                     <asp:Button ID="Button2" runat="server" Text="确定" CommandName="Insert" OnClick="Button2_Click"/>
                 </td>
                 <td>
-                    
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Button ID="Button3" runat="server" Text="退出登录" OnClick="Button3_Click"  Visible="False"/>
                 </td>
             </tr>
         </table>

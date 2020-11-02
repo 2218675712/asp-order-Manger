@@ -20,7 +20,7 @@
                 <Items>
                     <asp:MenuItem NavigateUrl="manage_staff.aspx" Text="员工列表" Value="员工列表"></asp:MenuItem>
                     <asp:MenuItem NavigateUrl="device_list.aspx" Text="设备列表" Value="设备列表"></asp:MenuItem>
-                    <asp:MenuItem NavigateUrl="manage_info.aspx" Text="个人信息" Value="个人信息"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="add_staff.aspx?staffId=1&info=1" Text="个人信息" Value="个人信息"></asp:MenuItem>
                     <asp:MenuItem NavigateUrl="out_device_list.aspx" Text="出库列表" Value="出库列表"></asp:MenuItem>
                 </Items>
             </asp:Menu>
