@@ -11,7 +11,7 @@ namespace WebApplication4
 {
 
 
-    public partial class order_list
+    public partial class Orderlist
     {
 
         /// <summary>

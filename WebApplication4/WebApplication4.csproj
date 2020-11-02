@@ -71,7 +71,6 @@
     <Content Include="manage_staff.aspx" />
     <Content Include="manage_staff_login.aspx" />
     <Content Include="order_detail.aspx" />
-    <Content Include="order_list.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -103,13 +102,6 @@
     </Compile>
     <Compile Include="order_detail.aspx.designer.cs">
       <DependentUpon>order_detail.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="order_list.aspx.cs">
-      <DependentUpon>order_list.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="order_list.aspx.designer.cs">
-      <DependentUpon>order_list.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="uploadHelper.cs" />
