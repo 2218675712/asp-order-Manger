@@ -93,13 +93,9 @@
     <Compile Include="add_staff.aspx.designer.cs">
       <DependentUpon>add_staff.aspx</DependentUpon>
     </Compile>
-    <Compile Include="cookie_test.aspx.cs">
-      <DependentUpon>cookie_test.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="cookie_test.aspx.designer.cs">
-      <DependentUpon>cookie_test.aspx</DependentUpon>
-    </Compile>
+    <Compile Include="CookieHelper.cs" />
+    <Compile Include="cookie_test.aspx.cs" />
+    <Compile Include="cookie_test.aspx.designer.cs" />
     <Compile Include="manage_staff.aspx.cs">
       <DependentUpon>manage_staff.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

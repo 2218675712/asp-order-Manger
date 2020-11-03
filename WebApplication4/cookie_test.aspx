@@ -20,18 +20,20 @@
             <tr>
                 <td>密码:</td>
                 <td>
-                    <asp:TextBox ID="TextBox2" runat="server" TextMode="Password"></asp:TextBox>
+                    <asp:TextBox ID="TextBox2" runat="server"  TextMode="Password"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td>
                     <asp:CheckBox ID="CheckBox1" runat="server" Text="记住密码"/>
                 </td>
-                <td></td>
+                <td>
+                    <asp:CheckBox  ID="CheckBox2" runat="server" Text="自动登录"/>
+                </td>
             </tr>
             <tr>
                 <td>
-                    <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click"/>
+                    <asp:Button ID="Button1" runat="server" Text="登录" OnClick="Button1_Click"/>
                 </td>
 
             </tr>
