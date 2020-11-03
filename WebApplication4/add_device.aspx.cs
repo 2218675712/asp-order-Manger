@@ -62,7 +62,6 @@ namespace WebApplication4
             // 判断是否是插入还是更新
             if (Button1.CommandName == "Insert")
             {
-                //todo 优化逻辑,封装里面代码
                 int num = OperaterBase.CommandBySql(
                     "insert into  Device_List ( device_number, device_count, is_delete) values ('" + device_number +
                     "'," + device_count + ",0)");
