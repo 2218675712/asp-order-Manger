@@ -69,6 +69,9 @@
   <ItemGroup>
     <Content Include="add_device.aspx" />
     <Content Include="add_staff.aspx" />
+    <Content Include="array-test.aspx" />
+    <Content Include="arrayList-test.aspx" />
+    <Content Include="auth-cookie.aspx" />
     <Content Include="cookie_test.aspx" />
     <Content Include="manage_staff.aspx" />
     <Content Include="manage_staff_login.aspx" />
@@ -92,6 +95,27 @@
     </Compile>
     <Compile Include="add_staff.aspx.designer.cs">
       <DependentUpon>add_staff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="array-test.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>array-test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="array-test.aspx.designer.cs">
+      <DependentUpon>array-test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="arrayList-test.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>arrayList-test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="arrayList-test.aspx.designer.cs">
+      <DependentUpon>arrayList-test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="auth-cookie.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>auth-cookie.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="auth-cookie.aspx.designer.cs">
+      <DependentUpon>auth-cookie.aspx</DependentUpon>
     </Compile>
     <Compile Include="CookieHelper.cs" />
     <Compile Include="cookie_test.aspx.cs" />
