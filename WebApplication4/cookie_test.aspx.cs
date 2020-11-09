@@ -25,8 +25,7 @@ namespace WebApplication4
                 if (!string.IsNullOrEmpty(worker_password1))
                 {
                     // 设置属性值
-                    TextBox2.Attributes.Add("value",worker_password1);
-                    
+                    TextBox2.Attributes.Add("value", worker_password1);
                 }
 
                 // 勾选自动登录
@@ -49,24 +48,6 @@ namespace WebApplication4
                 bool CheckBoxResult = CheckBox1.Checked;
                 if (CheckBoxResult)
                 {
-                    // 设置cookie
-                    // Response.Cookies["worker_mobile"].Value = ds.Tables[0].Rows[0]["worker_mobile"].ToString();
-                    // 设置过期时间
-                    // Response.Cookies["worker_mobile"].Expires=DateTime.Now.AddDays(3);
-                    /*HttpCookie cookie = new HttpCookie("worker_mobile")
-                    {
-                        Value = HttpUtility.UrlEncode(ds.Tables[0].Rows[0]["worker_mobile"].ToString()),
-                        Expires = DateTime.Now.AddDays(3)
-                    };
-                    HttpContext.Current.Response.Cookies.Add(cookie);
-                    // 设置直接过期
-                    // Response.Cookies["worker_mobile"].Expires=DateTime.Now.AddDays(-3);
-                    // 获取cookie
-                    HttpCookie httpCookie = HttpContext.Current.Request.Cookies["worker_mobile"];
-                    if (httpCookie != null)
-                    {
-                        Response.Write("登录成功");
-                    }*/
                     CookieHelper.SetCookie("worker_mobile", ds.Tables[0].Rows[0]["worker_mobile"].ToString(),
                         DateTime.Now.AddMinutes(10));
                     CookieHelper.SetCookie("worker_password", ds.Tables[0].Rows[0]["worker_password"].ToString(),
@@ -76,6 +57,8 @@ namespace WebApplication4
                     CookieHelper.SetCookie("Id", ds.Tables[0].Rows[0]["Id"].ToString(),
                         DateTime.Now.AddMinutes(10));
                 }
+
+                Response.Redirect("manage_staff.aspx");
             }
         }
     }

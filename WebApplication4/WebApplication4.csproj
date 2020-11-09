@@ -71,7 +71,6 @@
     <Content Include="add_staff.aspx" />
     <Content Include="array-test.aspx" />
     <Content Include="arrayList-test.aspx" />
-    <Content Include="auth-cookie.aspx" />
     <Content Include="cookie_test.aspx" />
     <Content Include="manage_staff.aspx" />
     <Content Include="manage_staff_login.aspx" />
@@ -110,16 +109,11 @@
     <Compile Include="arrayList-test.aspx.designer.cs">
       <DependentUpon>arrayList-test.aspx</DependentUpon>
     </Compile>
-    <Compile Include="auth-cookie.aspx.cs">
-      <SubType>ASPXCodeBehind</SubType>
-      <DependentUpon>auth-cookie.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="auth-cookie.aspx.designer.cs">
-      <DependentUpon>auth-cookie.aspx</DependentUpon>
-    </Compile>
+    <Compile Include="AuthCookie.cs" />
     <Compile Include="CookieHelper.cs" />
     <Compile Include="cookie_test.aspx.cs" />
     <Compile Include="cookie_test.aspx.designer.cs" />
+    <Compile Include="DeviceModel.cs" />
     <Compile Include="manage_staff.aspx.cs">
       <DependentUpon>manage_staff.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
