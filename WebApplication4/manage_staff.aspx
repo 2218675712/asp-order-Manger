@@ -16,7 +16,7 @@
             <asp:ListItem Value="1">男</asp:ListItem>
         </asp:DropDownList>
         <div>
-            <asp:Menu  ID="Menu1" runat="server">
+            <asp:Menu ID="Menu1" runat="server">
                 <Items>
                     <asp:MenuItem NavigateUrl="manage_staff.aspx" Text="员工列表" Value="员工列表"></asp:MenuItem>
                     <asp:MenuItem NavigateUrl="device_list.aspx" Text="设备列表" Value="设备列表"></asp:MenuItem>
@@ -66,8 +66,18 @@
                 </ItemTemplate>
             </asp:Repeater>
         </table>
-        <asp:Button ID="Button1" runat="server" Text="新建用户" OnClick="Button1_Click"/>
-        <asp:Button ID="Button2" runat="server" Text="退出登录" OnClick="Button2_Click" />
+        <div>
+            <asp:Button ID="Button1" runat="server" Text="新建用户" OnClick="Button1_Click"/>
+            <asp:Button ID="Button2" runat="server" Text="退出登录" OnClick="Button2_Click"/>
+            当前第【<asp:Label ID="Label_NowPage" runat="server" Text="1"></asp:Label>】页&nbsp;&nbsp;
+            共【<asp:Label ID="Label_MaxPage" runat="server" Text="加载中..."></asp:Label>】页&nbsp;&nbsp;
+            <asp:LinkButton ID="btn_First" runat="server">首页</asp:LinkButton>&nbsp;&nbsp;
+            <asp:LinkButton ID="btn_prev" runat="server">上一页</asp:LinkButton>&nbsp;&nbsp;
+            <asp:LinkButton ID="btn_next" runat="server">下一页</asp:LinkButton>&nbsp;&nbsp;
+            <asp:LinkButton ID="btn_last" runat="server">末页</asp:LinkButton>&nbsp;&nbsp;
+            <asp:DropDownList ID="Pages" runat="server"></asp:DropDownList>&nbsp;&nbsp;
+            <asp:Button ID="btn_go" runat="server" Text="跳转"/>&nbsp;&nbsp;
+        </div>
 
     </div>
 </form>
