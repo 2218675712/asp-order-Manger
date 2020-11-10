@@ -12,15 +12,15 @@
     <div>
         <table>
             <tr>
-                <td>管理员用户名:</td>
+                <td>手机号:</td>
                 <td>
                     <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
                 </td>
             </tr>
             <tr>
-                <td>管理员密码:</td>
+                <td>密码:</td>
                 <td>
-                    <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TextBox2" runat="server" TextMode="Password"></asp:TextBox>
                 </td>
             </tr>
             <tr>

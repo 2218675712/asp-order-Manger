@@ -10,11 +10,21 @@
 <body>
 <form id="form1" runat="server">
     <div>
-        <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" >
+        <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
             <asp:ListItem Value="">请选择性别</asp:ListItem>
             <asp:ListItem Value="0">女</asp:ListItem>
             <asp:ListItem Value="1">男</asp:ListItem>
         </asp:DropDownList>
+        <div>
+            <asp:Menu  ID="Menu1" runat="server">
+                <Items>
+                    <asp:MenuItem NavigateUrl="manage_staff.aspx" Text="员工列表" Value="员工列表"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="device_list.aspx" Text="设备列表" Value="设备列表"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="add_staff.aspx?staffId=1&info=1" Text="个人信息" Value="个人信息"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="out_device_list.aspx" Text="出库列表" Value="出库列表"></asp:MenuItem>
+                </Items>
+            </asp:Menu>
+        </div>
         <table style="text-align:center;border:solid 1px #000000;">
 
             <asp:Repeater ID="Repeater1" runat="server" OnItemCommand="Repeater1_ItemCommand">
@@ -27,6 +37,9 @@
                         <td>年龄</td>
                         <td>手机号</td>
                         <td>密码</td>
+                        <td>省份</td>
+                        <td>城市</td>
+                        <td>县区</td>
                     </tr>
 
                 </HeaderTemplate>
@@ -41,6 +54,9 @@
                         <td><%#Eval("worker_age") %></td>
                         <td><%#Eval("worker_mobile") %></td>
                         <td><%#Eval("worker_password") %></td>
+                        <td><%#Eval("s_province") %></td>
+                        <td><%#Eval("s_city") %></td>
+                        <td><%#Eval("s_district") %></td>
                         <td>
                             <asp:LinkButton ID="LinkButton1" runat="server" CommandName="Edit">更新</asp:LinkButton>
                             <asp:LinkButton ID="LinkButton2" runat="server" CommandName="Delete">删除</asp:LinkButton>
@@ -51,6 +67,7 @@
             </asp:Repeater>
         </table>
         <asp:Button ID="Button1" runat="server" Text="新建用户" OnClick="Button1_Click"/>
+        <asp:Button ID="Button2" runat="server" Text="退出登录" OnClick="Button2_Click" />
 
     </div>
 </form>

@@ -60,13 +60,13 @@ namespace WebApplication4
             }
 
             string sql =
-                "insert into Order_List ( order_number,order_staff, device_id, device_count,is_delete)values ('" +
+                "insert into Order_List ( order_number,order_date,order_staff, device_id, device_count,is_delete)values ('" +
                 order_number
-                + "','" + staffId + "','" + device_number + "','" + device_count + "',0)";
+                + "','"  +DateTime.Now.ToString()+"','"+ staffId + "','" + device_number + "','" + device_count + "',0)";
             int num = OperaterBase.CommandBySql(sql);
             if (num > 0)
             {
-                Response.Redirect("manage_staff_login.aspx");
+                Response.Redirect("order_list.aspx?staffId="+staffId);
             }
         }
 

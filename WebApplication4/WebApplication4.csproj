@@ -67,14 +67,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="add_device.aspx" />
     <Content Include="add_staff.aspx" />
     <Content Include="manage_staff.aspx" />
     <Content Include="manage_staff_login.aspx" />
     <Content Include="order_detail.aspx" />
+    <Content Include="order_list.aspx" />
+    <Content Include="device_list.aspx" />
+    <Content Include="out_device_list.aspx" />
     <Content Include="Web.config" />
-    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="add_device.aspx.cs">
+      <DependentUpon>add_device.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="add_device.aspx.designer.cs">
+      <DependentUpon>add_device.aspx</DependentUpon>
+    </Compile>
     <Compile Include="add_staff.aspx.cs">
       <DependentUpon>add_staff.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -104,16 +114,30 @@
     <Compile Include="order_detail.aspx.designer.cs">
       <DependentUpon>order_detail.aspx</DependentUpon>
     </Compile>
+    <Compile Include="order_list.aspx.cs">
+      <DependentUpon>order_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="order_list.aspx.designer.cs">
+      <DependentUpon>order_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="device_list.aspx.cs">
+      <DependentUpon>device_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="device_list.aspx.designer.cs">
+      <DependentUpon>device_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="out_device_list.aspx.cs">
+      <DependentUpon>out_device_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="out_device_list.aspx.designer.cs">
+      <DependentUpon>out_device_list.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="uploadHelper.cs" />
     <Compile Include="uploadModel.cs" />
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
