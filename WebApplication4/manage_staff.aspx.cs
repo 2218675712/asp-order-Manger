@@ -8,9 +8,10 @@ using System.Web.UI.WebControls;
 
 namespace WebApplication4
 {
-    public partial class manage_staff : System.Web.UI.Page
+    // 继承页面
+    public partial class manage_staff : BasePage
     {
-        protected void Page_Load(object sender, EventArgs e)
+        protected new void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
