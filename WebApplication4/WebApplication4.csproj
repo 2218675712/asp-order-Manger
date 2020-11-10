@@ -67,14 +67,28 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="add_device.aspx" />
     <Content Include="add_staff.aspx" />
+    <Content Include="array-test.aspx" />
+    <Content Include="arrayList-test.aspx" />
+    <Content Include="BasePage.aspx" />
+    <Content Include="cookie_test.aspx" />
     <Content Include="manage_staff.aspx" />
     <Content Include="manage_staff_login.aspx" />
     <Content Include="order_detail.aspx" />
     <Content Include="order_list.aspx" />
+    <Content Include="device_list.aspx" />
+    <Content Include="out_device_list.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="add_device.aspx.cs">
+      <DependentUpon>add_device.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="add_device.aspx.designer.cs">
+      <DependentUpon>add_device.aspx</DependentUpon>
+    </Compile>
     <Compile Include="add_staff.aspx.cs">
       <DependentUpon>add_staff.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -82,6 +96,32 @@
     <Compile Include="add_staff.aspx.designer.cs">
       <DependentUpon>add_staff.aspx</DependentUpon>
     </Compile>
+    <Compile Include="array-test.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>array-test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="array-test.aspx.designer.cs">
+      <DependentUpon>array-test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="arrayList-test.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>arrayList-test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="arrayList-test.aspx.designer.cs">
+      <DependentUpon>arrayList-test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AuthCookie1.cs" />
+    <Compile Include="BasePage.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>BasePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasePage.aspx.designer.cs">
+      <DependentUpon>BasePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CookieHelper.cs" />
+    <Compile Include="cookie_test.aspx.cs" />
+    <Compile Include="cookie_test.aspx.designer.cs" />
+    <Compile Include="DeviceModel.cs" />
     <Compile Include="manage_staff.aspx.cs">
       <DependentUpon>manage_staff.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -110,6 +150,20 @@
     </Compile>
     <Compile Include="order_list.aspx.designer.cs">
       <DependentUpon>order_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="device_list.aspx.cs">
+      <DependentUpon>device_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="device_list.aspx.designer.cs">
+      <DependentUpon>device_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="out_device_list.aspx.cs">
+      <DependentUpon>out_device_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="out_device_list.aspx.designer.cs">
+      <DependentUpon>out_device_list.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="uploadHelper.cs" />

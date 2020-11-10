@@ -8,11 +8,27 @@ using System.Web.UI.WebControls;
 
 namespace WebApplication4
 {
-    public partial class manage_staff : System.Web.UI.Page
+    // 继承页面
+    public partial class manage_staff : BasePage
     {
-        protected void Page_Load(object sender, EventArgs e)
+        protected new void Page_Load(object sender, EventArgs e)
         {
-            GetStaffData("select  * from Staff_Table where is_delete=0");
+            if (!IsPostBack)
+            {
+                string login_user = CookieHelper.GetCookieValue("worker_mobile");
+                if (string.IsNullOrEmpty(login_user))
+                {
+                    Response.Write("登录异常");
+                    return;
+                }
+                else
+                {
+                    string time = System.DateTime.Now.ToString();
+                    Response.Write("欢迎" + login_user + "，您在" + time + "登录");
+                }
+
+                GetStaffData("select  * from Staff_Table where is_delete=0");
+            }
         }
 
         /// <summary>
@@ -22,8 +38,54 @@ namespace WebApplication4
         {
             DataSet ds =
                 OperaterBase.GetData(sql);
+            List<DeviceModel> deviceList = new List<DeviceModel>();
+            foreach (DataRow dataRow in ds.Tables[0].Rows)
+            {
+                DeviceModel deviceModel=new DeviceModel();
+                foreach (DataColumn dataColumn in ds.Tables[0].Columns)
+                {
+                    switch (dataColumn.ColumnName)
+                    {
+                        case "worker_num" :
+                            deviceModel.worker_num = dataRow["worker_name"].ToString();
+                            break;
+                        case "worker_name" :
+                            deviceModel.worker_name = dataRow["worker_name"].ToString();
+                            break;
+                        case "worker_avatar" :
+                            deviceModel.worker_avatar = dataRow["worker_avatar"].ToString();
+                            break;
+                        case "worker_sex" :
+                            deviceModel.worker_sex = dataRow["worker_sex"].ToString();
+                            break;
+                        case "worker_age" : 
+                            deviceModel.worker_age = dataRow["worker_age"].ToString();
+                            break;
+                        case "worker_mobile" :    
+                            deviceModel.worker_mobile = dataRow["worker_mobile"].ToString();
+                            break;
+                        case "worker_password" :
+                            deviceModel.worker_password = dataRow["worker_password"].ToString();
+                            break;
+                        case "s_province" : 
+                            deviceModel.s_province = dataRow["s_province"].ToString();
+                            break;
+                        case "s_city" :
+                            deviceModel.s_city = dataRow["s_city"].ToString();
+                            break;
+                        case "s_district" : 
+                            deviceModel.s_district = dataRow["s_district"].ToString();
+                            break;
+                        case "Id" : 
+                            deviceModel.Id = dataRow["Id"].ToString();
+                            break;
 
-            Repeater1.DataSource = ds;
+                    }
+                }
+                deviceList.Add(deviceModel);
+                
+            }
+            Repeater1.DataSource = deviceList;
             Repeater1.DataBind();
         }
 
@@ -68,6 +130,17 @@ namespace WebApplication4
             {
                 GetStaffData("select  * from Staff_Table where is_delete=0");
             }
+        }
+
+        /// <summary>
+        /// 退出登录
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Response.Redirect("manage_staff_login.aspx");
         }
     }
 }

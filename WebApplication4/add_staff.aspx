@@ -83,11 +83,46 @@
                 </td>
             </tr>
             <tr>
+                <td>省份:</td>
+                <td>
+                    <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" AutoPostBack="True">
+                        <asp:ListItem Value="0">请选择省份</asp:ListItem>
+
+                    </asp:DropDownList>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>城市:</td>
+                <td>
+                    <asp:DropDownList ID="DropDownList2" runat="server" OnSelectedIndexChanged="DropDownList2_SelectedIndexChanged" AutoPostBack="True">
+                        <asp:ListItem Value="0">请选择城市</asp:ListItem>
+                    </asp:DropDownList>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>县区:</td>
+                <td>
+                    <asp:DropDownList ID="DropDownList3" runat="server" OnSelectedIndexChanged="DropDownList3_SelectedIndexChanged" AutoPostBack="True">
+                        <asp:ListItem Value="0">请选择地区</asp:ListItem>
+                    </asp:DropDownList>
+
+                </td>
+            </tr>
+            <tr>
                 <td>
                     <asp:Button ID="Button2" runat="server" Text="确定" CommandName="Insert" OnClick="Button2_Click"/>
                 </td>
                 <td>
-                    
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Button ID="Button3" runat="server" Text="退出登录" OnClick="Button3_Click" Visible="False"/>
                 </td>
             </tr>
         </table>

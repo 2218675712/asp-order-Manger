@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="manage_staff_login.aspx.cs" Inherits="WebApplication4.manage_staff_login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="cookie_test.aspx.cs" Inherits="WebApplication4.cookie_test" %>
 
 <!DOCTYPE html>
 
@@ -20,17 +20,22 @@
             <tr>
                 <td>密码:</td>
                 <td>
-                    <asp:TextBox ID="TextBox2" runat="server" TextMode="Password"></asp:TextBox>
+                    <asp:TextBox ID="TextBox2" runat="server"  TextMode="Password"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:CheckBox ID="CheckBox1" runat="server" Text="记住密码"/>
+                </td>
+                <td>
+                    <asp:CheckBox  ID="CheckBox2" runat="server" Text="自动登录"/>
                 </td>
             </tr>
             <tr>
                 <td>
                     <asp:Button ID="Button1" runat="server" Text="登录" OnClick="Button1_Click"/>
+                </td>
 
-                </td>
-                <td>
-                    <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
-                </td>
             </tr>
         </table>
     </div>
