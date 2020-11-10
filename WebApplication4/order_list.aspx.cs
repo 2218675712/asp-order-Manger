@@ -14,6 +14,7 @@ namespace WebApplication4
         {
             if (!IsPostBack)
             {
+
                 string login_user = Session["login_user"].ToString();
                 if (string.IsNullOrEmpty(login_user))
                 {
