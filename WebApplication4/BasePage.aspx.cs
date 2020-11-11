@@ -12,7 +12,7 @@ namespace WebApplication4
 
         public string CurrentUser
         {
-            get { return (string) CookieHelper.GetCookieValue("worker_mobile"); }
+            get { return CookieHelper.GetCookieValue("worker_mobile"); }
             set { }
         }
 
@@ -20,7 +20,10 @@ namespace WebApplication4
         {
             if (string.IsNullOrEmpty(CurrentUser))
             {
-                Response.Redirect("manage_staff_login.aspx");
+                if (string.IsNullOrEmpty(Session["worker_mobile"].ToString()))
+                {
+                    Response.Redirect("manage_staff_login.aspx");
+                }
             }
 
             // 回到调用他的页面

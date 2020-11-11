@@ -13,33 +13,7 @@ namespace WebApplication4
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            /*// 判断自动登录是否选中
-            if (CheckBox2.Checked == false)
-            {
-                string worker_mobile1 = CookieHelper.GetCookieValue("worker_mobile");
-                if (!string.IsNullOrEmpty(worker_mobile1))
-                {
-                    TextBox1.Text = worker_mobile1;
-                }
 
-                string worker_password1 = CookieHelper.GetCookieValue("worker_password");
-                if (!string.IsNullOrEmpty(worker_password1)) {
-                    // 设置属性值
-                    TextBox2.Attributes.Add("value", worker_password1);
-                    TextBox2.Text = worker_password1;
-                }
-
-                // 勾选自动登录
-                if (!string.IsNullOrEmpty(worker_mobile1) && !string.IsNullOrEmpty(worker_password1))
-                {
-                    CheckBox2.Checked = true;
-                }
-            }
-
-            if (CheckBox2.Checked)
-            {
-                Button1_Click(null,null);
-            }*/
             // 判断是否选择了记住密码
             var remember_password = CookieHelper.GetCookieValue("remember_password");
             if (!string.IsNullOrEmpty(remember_password))
@@ -110,6 +84,11 @@ namespace WebApplication4
                         DateTime.Now.AddMinutes(10));
                     CookieHelper.SetCookie("Id", ds.Tables[0].Rows[0]["Id"].ToString(),
                         DateTime.Now.AddMinutes(10));
+                }
+                else
+                {
+                    Session["worker_mobile"] = ds.Tables[0].Rows[0]["worker_mobile"];
+                    Session["worker_password"] = ds.Tables[0].Rows[0]["worker_password"];
                 }
 
                 Response.Redirect("manage_staff.aspx");
