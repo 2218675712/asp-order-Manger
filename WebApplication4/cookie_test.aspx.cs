@@ -91,7 +91,15 @@ namespace WebApplication4
                     Session["worker_password"] = ds.Tables[0].Rows[0]["worker_password"];
                 }
 
-                Response.Redirect("manage_staff.aspx");
+                // 必须是管理员
+                if (ds.Tables[0].Rows[0]["worker_num"].ToString() == "admin")
+                {
+                    Response.Redirect("manage_staff.aspx?staffId=1");
+                }
+                else
+                {
+                    Response.Redirect("order_list.aspx?staffId=" + ds.Tables[0].Rows[0]["Id"]);
+                }
             }
         }
 

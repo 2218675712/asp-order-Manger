@@ -14,12 +14,15 @@ namespace WebApplication4
         {
             if (!IsPostBack)
             {
-
-                string login_user = Session["login_user"].ToString();
+                string login_user = CookieHelper.GetCookieValue("worker_mobile");
                 if (string.IsNullOrEmpty(login_user))
                 {
-                    Response.Write("登录异常");
-                    return;
+                    login_user = Session["worker_mobile"].ToString();
+                    if (string.IsNullOrEmpty(login_user))
+                    {
+                        Response.Write("登录异常");
+                        return;
+                    }
                 }
                 else
                 {
