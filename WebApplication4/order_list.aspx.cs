@@ -32,6 +32,10 @@ namespace WebApplication4
 
                 // 页面第一次加载
                 GetOrderList();
+
+                Menu1.Items[0].NavigateUrl = "#";
+                Menu1.Items[1].NavigateUrl = "#";
+                Menu1.Items[3].NavigateUrl = "add_staff.aspx?staffId="+Request["staffId"]+"&info=1";
             }
         }
 

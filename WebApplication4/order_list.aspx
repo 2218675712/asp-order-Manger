@@ -10,6 +10,17 @@
 <body>
 <form id="form1" runat="server">
     <div>
+
+        <div>
+            <asp:Menu ID="Menu1" runat="server">
+                <Items>
+                    <asp:MenuItem NavigateUrl="manage_staff.aspx" Text="员工列表" Value="员工列表"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="device_list.aspx" Text="设备列表" Value="设备列表"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="order_list.aspx" Text="订单列表" Value="订单列表"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="add_staff.aspx?staffId=1&info=1" Text="个人信息" Value="个人信息"></asp:MenuItem>
+                </Items>
+            </asp:Menu>
+        </div>
         <table >
             <asp:Repeater ID="Repeater1" runat="server">
                 <HeaderTemplate>
@@ -35,7 +46,7 @@
                 </ItemTemplate>
             </asp:Repeater>
         </table>
-        <asp:Button ID="Button1" runat="server" Text="退出登录" OnClick="Button1_Click" />
+        <asp:Button ID="Button1" runat="server" Text="退出登录" OnClick="Button1_Click"/>
     </div>
 </form>
 </body>
