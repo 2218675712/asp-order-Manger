@@ -121,7 +121,8 @@
     <Compile Include="CookieHelper.cs" />
     <Compile Include="cookie_test.aspx.cs" />
     <Compile Include="cookie_test.aspx.designer.cs" />
-    <Compile Include="DeviceModel.cs" />
+    <Compile Include="DeviceListModel.cs" />
+    <Compile Include="StaffTableModel.cs" />
     <Compile Include="manage_staff.aspx.cs">
       <DependentUpon>manage_staff.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

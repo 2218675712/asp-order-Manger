@@ -12,8 +12,7 @@ namespace WebApplication4
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-    
-                GetOutDeviceList();
+            GetOutDeviceList();
         }
 
         /// <summary>
@@ -23,6 +22,32 @@ namespace WebApplication4
         {
             DataSet ds = OperaterBase.GetData("select * from Device_List");
             Repeater1.DataSource = ds;
+            Repeater1.DataBind();
+            List<DeviceListModel> deviceListModels = new List<DeviceListModel>();
+            foreach (DataRow dataRow in ds.Tables[0].Rows)
+            {
+                DeviceListModel deviceListModel = new DeviceListModel();
+                foreach (DataColumn dataColumn in ds.Tables[0].Columns)
+                {
+                    switch (dataColumn.ColumnName)
+                    {
+                        case "id":
+                            deviceListModel.id = dataRow["id"].ToString();
+                            break;
+                        case "device_number":
+                            deviceListModel.device_number = dataRow["device_number"].ToString();
+                            break;
+                        case "device_count":
+                            deviceListModel.device_count = dataRow["device_count"].ToString();
+                            break;
+                        case "is_delete":
+                            deviceListModel.is_delete = dataRow["is_delete"].ToString();
+                            break;
+                    }
+                }
+                deviceListModels.Add(deviceListModel);
+            }
+            Repeater1.DataSource = deviceListModels;
             Repeater1.DataBind();
         }
 
@@ -70,12 +95,12 @@ namespace WebApplication4
                 if (flag > 0)
                 {
                     Response.Write("<script type='text/javascript'>alert(成功删除：'" + flag + "'条数据);</script>");
-                    DropDownList1_SelectedIndexChanged(null,null);
+                    DropDownList1_SelectedIndexChanged(null, null);
                 }
             }
             else if (e.CommandName == "Edit")
             {
-                Response.Redirect("add_device.aspx?deviceId="+deviceId);
+                Response.Redirect("add_device.aspx?deviceId=" + deviceId);
             }
         }
 

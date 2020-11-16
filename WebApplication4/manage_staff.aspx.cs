@@ -42,54 +42,54 @@ namespace WebApplication4
         {
             DataSet ds =
                 OperaterBase.GetData(sql);
-            List<DeviceModel> deviceList = new List<DeviceModel>();
+            List<StaffTableModel> staffTableModels = new List<StaffTableModel>();
             foreach (DataRow dataRow in ds.Tables[0].Rows)
             {
-                DeviceModel deviceModel = new DeviceModel();
+                StaffTableModel staffTableModel = new StaffTableModel();
                 foreach (DataColumn dataColumn in ds.Tables[0].Columns)
                 {
                     switch (dataColumn.ColumnName)
                     {
                         case "worker_num":
-                            deviceModel.worker_num = dataRow["worker_name"].ToString();
+                            staffTableModel.worker_num = dataRow["worker_name"].ToString();
                             break;
                         case "worker_name":
-                            deviceModel.worker_name = dataRow["worker_name"].ToString();
+                            staffTableModel.worker_name = dataRow["worker_name"].ToString();
                             break;
                         case "worker_avatar":
-                            deviceModel.worker_avatar = dataRow["worker_avatar"].ToString();
+                            staffTableModel.worker_avatar = dataRow["worker_avatar"].ToString();
                             break;
                         case "worker_sex":
-                            deviceModel.worker_sex = dataRow["worker_sex"].ToString();
+                            staffTableModel.worker_sex = dataRow["worker_sex"].ToString();
                             break;
                         case "worker_age":
-                            deviceModel.worker_age = dataRow["worker_age"].ToString();
+                            staffTableModel.worker_age = dataRow["worker_age"].ToString();
                             break;
                         case "worker_mobile":
-                            deviceModel.worker_mobile = dataRow["worker_mobile"].ToString();
+                            staffTableModel.worker_mobile = dataRow["worker_mobile"].ToString();
                             break;
                         case "worker_password":
-                            deviceModel.worker_password = dataRow["worker_password"].ToString();
+                            staffTableModel.worker_password = dataRow["worker_password"].ToString();
                             break;
                         case "s_province":
-                            deviceModel.s_province = dataRow["s_province"].ToString();
+                            staffTableModel.s_province = dataRow["s_province"].ToString();
                             break;
                         case "s_city":
-                            deviceModel.s_city = dataRow["s_city"].ToString();
+                            staffTableModel.s_city = dataRow["s_city"].ToString();
                             break;
                         case "s_district":
-                            deviceModel.s_district = dataRow["s_district"].ToString();
+                            staffTableModel.s_district = dataRow["s_district"].ToString();
                             break;
                         case "Id":
-                            deviceModel.Id = dataRow["Id"].ToString();
+                            staffTableModel.Id = dataRow["Id"].ToString();
                             break;
                     }
                 }
 
-                deviceList.Add(deviceModel);
+                staffTableModels.Add(staffTableModel);
             }
 
-            Repeater1.DataSource = deviceList;
+            Repeater1.DataSource = staffTableModels;
             Repeater1.DataBind();
         }
 

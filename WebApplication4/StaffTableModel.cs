@@ -1,8 +1,8 @@
 ﻿namespace WebApplication4
 {
-    public class DeviceModel
+    public class StaffTableModel
     {
-        public DeviceModel()
+        public StaffTableModel()
         {
         }
         public string worker_num { get; set; }
