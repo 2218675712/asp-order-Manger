@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/NavBar.Master" AutoEventWireup="true" CodeBehind="device_list.aspx.cs" Inherits="WebApplication4.device_list" %>
+<%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="webdiyer" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -37,5 +38,20 @@
             </asp:Repeater>
         </table>
         <asp:Button runat="server" ID="Button3" Text="添加设备" OnClick="Button3_Click"/>
+        <div class="am-fr">
+            <webdiyer:AspNetPager
+                runat="server"
+                ID="AspNetPager1"
+                FirstPageText="首页"
+                HorizontalAlign="Center"
+                AlwaysShow="True"
+                PageSize="3"
+                LastPageText="尾页"
+                NextPageText="下一页"
+                PrevPageText="上一页"
+                OnPageChanged="AspNetPager1_OnPageChanged">
+            </webdiyer:AspNetPager>
+        </div>
+
     </div>
 </asp:Content>

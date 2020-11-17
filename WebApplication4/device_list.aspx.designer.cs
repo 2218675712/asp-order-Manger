@@ -40,6 +40,15 @@ namespace WebApplication4 {
         protected global::System.Web.UI.WebControls.Button Button3;
         
         /// <summary>
+        /// AspNetPager1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify, move the field declaration from the designer file to a code-behind file.
+        /// </remarks>
+        protected global::Wuqi.Webdiyer.AspNetPager AspNetPager1;
+        
+        /// <summary>
         /// Master property.
         /// </summary>
         /// <remarks>

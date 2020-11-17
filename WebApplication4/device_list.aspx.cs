@@ -13,7 +13,6 @@ namespace WebApplication4
         protected void Page_Load(object sender, EventArgs e)
         {
             GetOutDeviceList();
-
         }
 
         /// <summary>
@@ -22,9 +21,10 @@ namespace WebApplication4
         public void GetOutDeviceList()
         {
             DataSet ds = OperaterBase.GetData("select * from Device_List");
-            Repeater1.DataSource = ds;
+            Repeater1.DataSource = this.getPage(ds);
             Repeater1.DataBind();
-            List<DeviceListModel> deviceListModels = new List<DeviceListModel>();
+            /*
+             List<DeviceListModel> deviceListModels = new List<DeviceListModel>();
             foreach (DataRow dataRow in ds.Tables[0].Rows)
             {
                 DeviceListModel deviceListModel = new DeviceListModel();
@@ -46,10 +46,13 @@ namespace WebApplication4
                             break;
                     }
                 }
+
                 deviceListModels.Add(deviceListModel);
             }
+
             Repeater1.DataSource = deviceListModels;
             Repeater1.DataBind();
+            */
         }
 
         /// <summary>
@@ -113,6 +116,27 @@ namespace WebApplication4
         protected void Button3_Click(object sender, EventArgs e)
         {
             Response.Redirect("add_device.aspx");
+        }
+
+        public PagedDataSource getPage(DataSet ds)
+        {
+            // 总条数
+            this.AspNetPager1.RecordCount = ds.Tables[0].Rows.Count;
+            PagedDataSource pagedDataSource = new PagedDataSource();
+
+            pagedDataSource.DataSource = ds.Tables[0].DefaultView;
+            // 是否启动分页
+            pagedDataSource.AllowPaging = true;
+            // 当前是第几页
+            pagedDataSource.CurrentPageIndex = AspNetPager1.CurrentPageIndex - 1;
+            // 显示多少条数据
+            pagedDataSource.PageSize = AspNetPager1.PageSize;
+            return pagedDataSource;
+        }
+
+        protected void AspNetPager1_OnPageChanged(object sender, EventArgs e)
+        {
+            GetOutDeviceList();
         }
     }
 }
