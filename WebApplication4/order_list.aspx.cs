@@ -32,10 +32,6 @@ namespace WebApplication4
 
                 // 页面第一次加载
                 GetOrderList();
-
-                Menu1.Items[0].NavigateUrl = "#";
-                Menu1.Items[1].NavigateUrl = "#";
-                Menu1.Items[3].NavigateUrl = "add_staff.aspx?staffId="+Request["staffId"]+"&info=1";
             }
         }
 
@@ -83,6 +79,34 @@ namespace WebApplication4
         {
             Session.Clear();
             Response.Redirect("manage_staff_login.aspx");
+        }
+
+        protected void Menu1_MenuItemClick(object sender, MenuEventArgs e)
+        {
+            if (e.Item.Text == "员工列表" || e.Item.Text == "设备列表")
+            {
+                Response.Write("<script type='text/javascript'>" +
+                               "alert('您没有权限!');" +
+                               "history.go(-1);" +
+                               "</script>");
+                Response.End();
+            }
+            
+            switch (e.Item.Text)
+            {
+                case "员工列表":
+                    e.Item.NavigateUrl = "#";
+                    break;
+                case "设备列表":
+                    e.Item.NavigateUrl = "#";
+                    break;
+                case "订单列表":
+                    e.Item.NavigateUrl = "order_list.aspx";
+                    break;
+                case "个人信息":
+                    e.Item.NavigateUrl = "add_staff.aspx?staffId=" + Request["staffId"] + "&info=1";
+                    break;
+            }
         }
     }
 }

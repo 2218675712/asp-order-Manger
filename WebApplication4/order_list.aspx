@@ -10,14 +10,13 @@
 <body>
 <form id="form1" runat="server">
     <div>
-
         <div>
-            <asp:Menu ID="Menu1" runat="server">
+            <asp:Menu ID="Menu1" runat="server" OnMenuItemClick="Menu1_MenuItemClick">
                 <Items>
-                    <asp:MenuItem NavigateUrl="manage_staff.aspx" Text="员工列表" Value="员工列表"></asp:MenuItem>
-                    <asp:MenuItem NavigateUrl="device_list.aspx" Text="设备列表" Value="设备列表"></asp:MenuItem>
-                    <asp:MenuItem NavigateUrl="order_list.aspx" Text="订单列表" Value="订单列表"></asp:MenuItem>
-                    <asp:MenuItem NavigateUrl="add_staff.aspx?staffId=1&info=1" Text="个人信息" Value="个人信息"></asp:MenuItem>
+                    <asp:MenuItem Text="员工列表" Value="员工列表"></asp:MenuItem>
+                    <asp:MenuItem Text="设备列表" Value="设备列表"></asp:MenuItem>
+                    <asp:MenuItem Text="订单列表" Value="订单列表"></asp:MenuItem>
+                    <asp:MenuItem Text="个人信息" Value="个人信息"></asp:MenuItem>
                 </Items>
             </asp:Menu>
         </div>

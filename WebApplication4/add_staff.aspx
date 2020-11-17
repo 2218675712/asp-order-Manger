@@ -1,21 +1,14 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="add_staff.aspx.cs" Inherits="WebApplication4.add_staff" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+﻿<%@ Page Language="C#" MasterPageFile="~/NavBar.Master" AutoEventWireup="true" CodeBehind="add_staff.aspx.cs" Inherits="WebApplication4.add_staff" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
-        label{
-            width:100px;
-            height:24px;
-            display:block;
-        }
-    </style>
-</head>
-<body>
-<form id="form1" runat="server">
+                label{
+                    width:100px;
+                    height:24px;
+                    display:block;
+                }
+            </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div>
         <table>
             <tr>
@@ -127,6 +120,4 @@
             </tr>
         </table>
     </div>
-</form>
-</body>
-</html>
+</asp:Content>

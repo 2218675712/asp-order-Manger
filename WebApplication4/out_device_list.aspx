@@ -1,14 +1,7 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="out_device_list.aspx.cs" Inherits="WebApplication4.out_device_list" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-</head>
-<body>
-<form id="form1" runat="server">
+﻿<%@ Page Language="C#" MasterPageFile="~/NavBar.Master" AutoEventWireup="true" CodeBehind="out_device_list.aspx.cs" Inherits="WebApplication4.out_device_list" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div>
         <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
             <asp:ListItem Value="">是否删除</asp:ListItem>
@@ -39,16 +32,14 @@
                     <tr>
                         <td><%#Eval("device_number") %></td>
                         <td><%#Eval("device_count") %></td>
-                                              <td><%#Eval("is_delete").ToString()=="True"?"已删除":"未删除"%></td>
+                        <td><%#Eval("is_delete").ToString() == "True" ? "已删除" : "未删除" %></td>
 
                         <td><%#Eval("out_quantity") %></td>
                         <%-- 隐藏控件设备主键 --%>
-                            <asp:HiddenField runat="server" ID="HiddenField1" Value='<%#Eval("id") %>'/>
+                        <asp:HiddenField runat="server" ID="HiddenField1" Value='<%#Eval("id") %>'/>
                     </tr>
                 </ItemTemplate>
             </asp:Repeater>
         </table>
     </div>
-</form>
-</body>
-</html>
+</asp:Content>
